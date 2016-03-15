@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "URLSchemeHandler.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,35 @@
 @implementation AppDelegate
 
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
+    return YES;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if (url != nil && sourceApplication != nil)
+    {
+        URLSchemeHandler *handler = [[URLSchemeHandler alloc] init];
+        
+        BOOL wasSuccess = [handler handleWithUrl:url andApplicationName:sourceApplication];
+        NSString *message =  wasSuccess ?  @"The URL has been been added" : @"The url could not be added";
+        UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"URL received"
+                                                                            message:message
+                                                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+        [controller addAction:cancel];
+        
+        [self.window.rootViewController presentViewController:controller animated:YES completion:nil];
+    }
+    
     return YES;
 }
 

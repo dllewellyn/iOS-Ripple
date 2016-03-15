@@ -10,6 +10,12 @@
 
 @interface ViewController : UIViewController
 
+// Trigger button
+@property IBOutlet UIButton *btnTrigger;
 
+/**
+ Perform trigger action
+ */
+-(IBAction) trigger:(id)sender;
 @end
 

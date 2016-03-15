@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F70921C980E3C0010CA9B /* Trigger.m */; };
 		6FACA8AC1C916F92004F43F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AB1C916F92004F43F5 /* main.m */; };
 		6FACA8AF1C916F92004F43F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AE1C916F92004F43F5 /* AppDelegate.m */; };
 		6FACA8B21C916F92004F43F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8B11C916F92004F43F5 /* ViewController.m */; };
@@ -14,6 +15,24 @@
 		6FACA8B71C916F92004F43F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA8B61C916F92004F43F5 /* Assets.xcassets */; };
 		6FACA8BA1C916F92004F43F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA8B81C916F92004F43F5 /* LaunchScreen.storyboard */; };
 		6FACA8C51C916F92004F43F5 /* RippleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8C41C916F92004F43F5 /* RippleTests.m */; };
+		6FACA8D31C917797004F43F5 /* RegisteredApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8D21C917797004F43F5 /* RegisteredApplication.m */; };
+		6FACA8D61C9178B8004F43F5 /* RegisteredApplicationList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8D51C9178B8004F43F5 /* RegisteredApplicationList.m */; };
+		6FACA8D81C9179E0004F43F5 /* RegisteredApplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8D71C9179E0004F43F5 /* RegisteredApplicationTest.m */; };
+		6FACA8DA1C917ADD004F43F5 /* RegisteredApplicationListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8D91C917ADD004F43F5 /* RegisteredApplicationListTest.m */; };
+		6FACA8DE1C917BC8004F43F5 /* RegisteredApplicationCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8DD1C917BC8004F43F5 /* RegisteredApplicationCD.m */; };
+		6FACA8E11C917BDD004F43F5 /* Ripple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8DF1C917BDD004F43F5 /* Ripple.xcdatamodeld */; };
+		6FACA8E41C917DAC004F43F5 /* CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8E31C917DAC004F43F5 /* CoreDataHandler.m */; };
+		6FACA8EC1C9182BA004F43F5 /* RegisteredApplicationCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8EB1C9182BA004F43F5 /* RegisteredApplicationCDTest.m */; };
+		6FACA8F31C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8F01C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.m */; };
+		6FACA8F41C9187BE004F43F5 /* RegisteredApplicationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8F21C9187BE004F43F5 /* RegisteredApplicationEntity.m */; };
+		6FACA8F71C9189F0004F43F5 /* RegisteredApplicationListCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8F61C9189F0004F43F5 /* RegisteredApplicationListCD.m */; };
+		6FACA8FA1C91934E004F43F5 /* RegisteredApplicationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8F91C91934E004F43F5 /* RegisteredApplicationFactory.m */; };
+		6FACA8FC1C91960C004F43F5 /* RegisteredApplicationListCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8FB1C91960C004F43F5 /* RegisteredApplicationListCDTest.m */; };
+		6FACA8FE1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8FD1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m */; };
+		6FACA9001C91BBB7004F43F5 /* AppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8FF1C91BBB7004F43F5 /* AppDelegateTest.m */; };
+		6FACA9031C91C31E004F43F5 /* URLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */; };
+		6FACA9051C91CD9C004F43F5 /* UrlSchemeHandlertest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA9041C91CD9C004F43F5 /* UrlSchemeHandlertest.m */; };
+		6FB1CF681C974079009652CF /* RegisteredAppTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB1CF671C974079009652CF /* RegisteredAppTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F7F70911C980E3C0010CA9B /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
+		6F7F70921C980E3C0010CA9B /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
 		6FACA8A71C916F92004F43F5 /* Ripple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FACA8AB1C916F92004F43F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FACA8AD1C916F92004F43F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +61,34 @@
 		6FACA8C01C916F92004F43F5 /* RippleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RippleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FACA8C41C916F92004F43F5 /* RippleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RippleTests.m; sourceTree = "<group>"; };
 		6FACA8C61C916F92004F43F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FACA8D11C917797004F43F5 /* RegisteredApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredApplication.h; sourceTree = "<group>"; };
+		6FACA8D21C917797004F43F5 /* RegisteredApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplication.m; sourceTree = "<group>"; };
+		6FACA8D41C9178B8004F43F5 /* RegisteredApplicationList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredApplicationList.h; sourceTree = "<group>"; };
+		6FACA8D51C9178B8004F43F5 /* RegisteredApplicationList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationList.m; sourceTree = "<group>"; };
+		6FACA8D71C9179E0004F43F5 /* RegisteredApplicationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationTest.m; sourceTree = "<group>"; };
+		6FACA8D91C917ADD004F43F5 /* RegisteredApplicationListTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationListTest.m; sourceTree = "<group>"; };
+		6FACA8DC1C917BC8004F43F5 /* RegisteredApplicationCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredApplicationCD.h; sourceTree = "<group>"; };
+		6FACA8DD1C917BC8004F43F5 /* RegisteredApplicationCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationCD.m; sourceTree = "<group>"; };
+		6FACA8E01C917BDD004F43F5 /* Ripple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ripple.xcdatamodel; sourceTree = "<group>"; };
+		6FACA8E21C917DAC004F43F5 /* CoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHandler.h; sourceTree = "<group>"; };
+		6FACA8E31C917DAC004F43F5 /* CoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHandler.m; sourceTree = "<group>"; };
+		6FACA8EB1C9182BA004F43F5 /* RegisteredApplicationCDTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationCDTest.m; sourceTree = "<group>"; };
+		6FACA8EF1C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RegisteredApplicationEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6FACA8F01C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RegisteredApplicationEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6FACA8F11C9187BE004F43F5 /* RegisteredApplicationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredApplicationEntity.h; sourceTree = "<group>"; };
+		6FACA8F21C9187BE004F43F5 /* RegisteredApplicationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationEntity.m; sourceTree = "<group>"; };
+		6FACA8F51C9189F0004F43F5 /* RegisteredApplicationListCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredApplicationListCD.h; sourceTree = "<group>"; };
+		6FACA8F61C9189F0004F43F5 /* RegisteredApplicationListCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationListCD.m; sourceTree = "<group>"; };
+		6FACA8F81C91934E004F43F5 /* RegisteredApplicationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredApplicationFactory.h; sourceTree = "<group>"; };
+		6FACA8F91C91934E004F43F5 /* RegisteredApplicationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationFactory.m; sourceTree = "<group>"; };
+		6FACA8FB1C91960C004F43F5 /* RegisteredApplicationListCDTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredApplicationListCDTest.m; sourceTree = "<group>"; };
+		6FACA8FD1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisteredApplicationFactoryTest.m; path = ../Ripple/RegisteredApplicationFactoryTest.m; sourceTree = "<group>"; };
+		6FACA8FF1C91BBB7004F43F5 /* AppDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateTest.m; sourceTree = "<group>"; };
+		6FACA9011C91C31E004F43F5 /* URLSchemeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSchemeHandler.h; sourceTree = "<group>"; };
+		6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSchemeHandler.m; sourceTree = "<group>"; };
+		6FACA9041C91CD9C004F43F5 /* UrlSchemeHandlertest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlSchemeHandlertest.m; sourceTree = "<group>"; };
+		6FB1CF661C974079009652CF /* RegisteredAppTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredAppTableViewController.h; sourceTree = "<group>"; };
+		6FB1CF671C974079009652CF /* RegisteredAppTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredAppTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,15 +130,23 @@
 		6FACA8A91C916F92004F43F5 /* Ripple */ = {
 			isa = PBXGroup;
 			children = (
+				6FACA8DB1C917B4C004F43F5 /* CoreDataImpl */,
+				6FACA8CF1C91748B004F43F5 /* RegisteredApp */,
 				6FACA8AD1C916F92004F43F5 /* AppDelegate.h */,
 				6FACA8AE1C916F92004F43F5 /* AppDelegate.m */,
 				6FACA8B01C916F92004F43F5 /* ViewController.h */,
 				6FACA8B11C916F92004F43F5 /* ViewController.m */,
 				6FACA8B31C916F92004F43F5 /* Main.storyboard */,
+				6F7F70911C980E3C0010CA9B /* Trigger.h */,
+				6F7F70921C980E3C0010CA9B /* Trigger.m */,
 				6FACA8B61C916F92004F43F5 /* Assets.xcassets */,
 				6FACA8B81C916F92004F43F5 /* LaunchScreen.storyboard */,
 				6FACA8BB1C916F92004F43F5 /* Info.plist */,
 				6FACA8AA1C916F92004F43F5 /* Supporting Files */,
+				6FACA9011C91C31E004F43F5 /* URLSchemeHandler.h */,
+				6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */,
+				6FB1CF661C974079009652CF /* RegisteredAppTableViewController.h */,
+				6FB1CF671C974079009652CF /* RegisteredAppTableViewController.m */,
 			);
 			path = Ripple;
 			sourceTree = "<group>";
@@ -105,10 +162,48 @@
 		6FACA8C31C916F92004F43F5 /* RippleTests */ = {
 			isa = PBXGroup;
 			children = (
+				6FACA8FD1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m */,
 				6FACA8C41C916F92004F43F5 /* RippleTests.m */,
 				6FACA8C61C916F92004F43F5 /* Info.plist */,
+				6FACA8D71C9179E0004F43F5 /* RegisteredApplicationTest.m */,
+				6FACA8D91C917ADD004F43F5 /* RegisteredApplicationListTest.m */,
+				6FACA8FB1C91960C004F43F5 /* RegisteredApplicationListCDTest.m */,
+				6FACA8EB1C9182BA004F43F5 /* RegisteredApplicationCDTest.m */,
+				6FACA8FF1C91BBB7004F43F5 /* AppDelegateTest.m */,
+				6FACA9041C91CD9C004F43F5 /* UrlSchemeHandlertest.m */,
 			);
 			path = RippleTests;
+			sourceTree = "<group>";
+		};
+		6FACA8CF1C91748B004F43F5 /* RegisteredApp */ = {
+			isa = PBXGroup;
+			children = (
+				6FACA8D11C917797004F43F5 /* RegisteredApplication.h */,
+				6FACA8D21C917797004F43F5 /* RegisteredApplication.m */,
+				6FACA8D41C9178B8004F43F5 /* RegisteredApplicationList.h */,
+				6FACA8D51C9178B8004F43F5 /* RegisteredApplicationList.m */,
+				6FACA8F81C91934E004F43F5 /* RegisteredApplicationFactory.h */,
+				6FACA8F91C91934E004F43F5 /* RegisteredApplicationFactory.m */,
+			);
+			name = RegisteredApp;
+			sourceTree = "<group>";
+		};
+		6FACA8DB1C917B4C004F43F5 /* CoreDataImpl */ = {
+			isa = PBXGroup;
+			children = (
+				6FACA8DC1C917BC8004F43F5 /* RegisteredApplicationCD.h */,
+				6FACA8DD1C917BC8004F43F5 /* RegisteredApplicationCD.m */,
+				6FACA8DF1C917BDD004F43F5 /* Ripple.xcdatamodeld */,
+				6FACA8EF1C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.h */,
+				6FACA8F01C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.m */,
+				6FACA8F11C9187BE004F43F5 /* RegisteredApplicationEntity.h */,
+				6FACA8F21C9187BE004F43F5 /* RegisteredApplicationEntity.m */,
+				6FACA8E21C917DAC004F43F5 /* CoreDataHandler.h */,
+				6FACA8E31C917DAC004F43F5 /* CoreDataHandler.m */,
+				6FACA8F51C9189F0004F43F5 /* RegisteredApplicationListCD.h */,
+				6FACA8F61C9189F0004F43F5 /* RegisteredApplicationListCD.m */,
+			);
+			name = CoreDataImpl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +306,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */,
+				6FACA9031C91C31E004F43F5 /* URLSchemeHandler.m in Sources */,
+				6FACA8F31C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.m in Sources */,
+				6FACA8D61C9178B8004F43F5 /* RegisteredApplicationList.m in Sources */,
+				6FACA8D31C917797004F43F5 /* RegisteredApplication.m in Sources */,
+				6FACA8FA1C91934E004F43F5 /* RegisteredApplicationFactory.m in Sources */,
+				6FACA8F71C9189F0004F43F5 /* RegisteredApplicationListCD.m in Sources */,
 				6FACA8B21C916F92004F43F5 /* ViewController.m in Sources */,
 				6FACA8AF1C916F92004F43F5 /* AppDelegate.m in Sources */,
 				6FACA8AC1C916F92004F43F5 /* main.m in Sources */,
+				6FACA8E41C917DAC004F43F5 /* CoreDataHandler.m in Sources */,
+				6FACA8F41C9187BE004F43F5 /* RegisteredApplicationEntity.m in Sources */,
+				6FB1CF681C974079009652CF /* RegisteredAppTableViewController.m in Sources */,
+				6FACA8DE1C917BC8004F43F5 /* RegisteredApplicationCD.m in Sources */,
+				6FACA8E11C917BDD004F43F5 /* Ripple.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FACA8DA1C917ADD004F43F5 /* RegisteredApplicationListTest.m in Sources */,
+				6FACA8EC1C9182BA004F43F5 /* RegisteredApplicationCDTest.m in Sources */,
+				6FACA8D81C9179E0004F43F5 /* RegisteredApplicationTest.m in Sources */,
+				6FACA9001C91BBB7004F43F5 /* AppDelegateTest.m in Sources */,
+				6FACA8FE1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m in Sources */,
 				6FACA8C51C916F92004F43F5 /* RippleTests.m in Sources */,
+				6FACA8FC1C91960C004F43F5 /* RegisteredApplicationListCDTest.m in Sources */,
+				6FACA9051C91CD9C004F43F5 /* UrlSchemeHandlertest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +514,7 @@
 				6FACA8CB1C916F92004F43F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FACA8CC1C916F92004F43F5 /* Build configuration list for PBXNativeTarget "RippleTests" */ = {
 			isa = XCConfigurationList;
@@ -408,8 +523,22 @@
 				6FACA8CE1C916F92004F43F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6FACA8DF1C917BDD004F43F5 /* Ripple.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6FACA8E01C917BDD004F43F5 /* Ripple.xcdatamodel */,
+			);
+			currentVersion = 6FACA8E01C917BDD004F43F5 /* Ripple.xcdatamodel */;
+			path = Ripple.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6FACA89F1C916F92004F43F5 /* Project object */;
 }
