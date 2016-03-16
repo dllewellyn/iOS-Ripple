@@ -52,7 +52,7 @@
         [self performSegueWithIdentifier:@"ShowCountdown" sender:self];
     }
     
-    self.btnTrigger.layer.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
+    self.btnTrigger.layer.frame = CGRectMake(self.resetLocation.origin.x,
                                              self.resetLocation.origin.y,
                                              self.resetLocation.size.height,
                                              self.resetLocation.size.width);
@@ -69,12 +69,12 @@
     CGFloat x = CGRectGetMaxX(self.view.frame);
     
     self.bottomRect = CGRectMake(x / 2 - 100, // Half way, then minus the width
-                                 y - 200,
+                                 y - 300,
                                  200,
                                  200);
     
      self.innerView = [[UIView alloc] initWithFrame:self.bottomRect];
-    [self.innerView setBackgroundColor:[UIColor blackColor]];
+    [self.innerView setBackgroundColor:[UIColor blueColor]];
     [self.innerView.layer setCornerRadius:100];
     
     [self.view addSubview:self.innerView];
