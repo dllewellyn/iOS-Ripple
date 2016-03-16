@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F052C871C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F052C861C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png */; };
+		6F052C8D1C99659B00AF8312 /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C8C1C99659B00AF8312 /* CountdownViewController.m */; };
 		6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F70921C980E3C0010CA9B /* Trigger.m */; };
 		6FACA8AC1C916F92004F43F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AB1C916F92004F43F5 /* main.m */; };
 		6FACA8AF1C916F92004F43F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AE1C916F92004F43F5 /* AppDelegate.m */; };
@@ -46,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F052C861C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_ripple_trigger_no_shadow.png; sourceTree = "<group>"; };
+		6F052C8B1C99659B00AF8312 /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountdownViewController.h; path = ../CountdownViewController.h; sourceTree = "<group>"; };
+		6F052C8C1C99659B00AF8312 /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountdownViewController.m; path = ../CountdownViewController.m; sourceTree = "<group>"; };
 		6F7F70911C980E3C0010CA9B /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
 		6F7F70921C980E3C0010CA9B /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
 		6FACA8A71C916F92004F43F5 /* Ripple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripple.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +114,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F052C881C99651C00AF8312 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F052C8B1C99659B00AF8312 /* CountdownViewController.h */,
+				6F052C8C1C99659B00AF8312 /* CountdownViewController.m */,
+				6FACA8B01C916F92004F43F5 /* ViewController.h */,
+				6FACA8B11C916F92004F43F5 /* ViewController.m */,
+				6FB1CF661C974079009652CF /* RegisteredAppTableViewController.h */,
+				6FB1CF671C974079009652CF /* RegisteredAppTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		6FACA89E1C916F92004F43F5 = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +148,11 @@
 		6FACA8A91C916F92004F43F5 /* Ripple */ = {
 			isa = PBXGroup;
 			children = (
+				6F052C881C99651C00AF8312 /* ViewControllers */,
 				6FACA8DB1C917B4C004F43F5 /* CoreDataImpl */,
 				6FACA8CF1C91748B004F43F5 /* RegisteredApp */,
 				6FACA8AD1C916F92004F43F5 /* AppDelegate.h */,
 				6FACA8AE1C916F92004F43F5 /* AppDelegate.m */,
-				6FACA8B01C916F92004F43F5 /* ViewController.h */,
-				6FACA8B11C916F92004F43F5 /* ViewController.m */,
 				6FACA8B31C916F92004F43F5 /* Main.storyboard */,
 				6F7F70911C980E3C0010CA9B /* Trigger.h */,
 				6F7F70921C980E3C0010CA9B /* Trigger.m */,
@@ -145,8 +162,6 @@
 				6FACA8AA1C916F92004F43F5 /* Supporting Files */,
 				6FACA9011C91C31E004F43F5 /* URLSchemeHandler.h */,
 				6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */,
-				6FB1CF661C974079009652CF /* RegisteredAppTableViewController.h */,
-				6FB1CF671C974079009652CF /* RegisteredAppTableViewController.m */,
 			);
 			path = Ripple;
 			sourceTree = "<group>";
@@ -154,6 +169,7 @@
 		6FACA8AA1C916F92004F43F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6F052C861C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png */,
 				6FACA8AB1C916F92004F43F5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -287,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FACA8BA1C916F92004F43F5 /* LaunchScreen.storyboard in Resources */,
+				6F052C871C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png in Resources */,
 				6FACA8B71C916F92004F43F5 /* Assets.xcassets in Resources */,
 				6FACA8B51C916F92004F43F5 /* Main.storyboard in Resources */,
 			);
@@ -310,6 +327,7 @@
 				6FACA9031C91C31E004F43F5 /* URLSchemeHandler.m in Sources */,
 				6FACA8F31C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.m in Sources */,
 				6FACA8D61C9178B8004F43F5 /* RegisteredApplicationList.m in Sources */,
+				6F052C8D1C99659B00AF8312 /* CountdownViewController.m in Sources */,
 				6FACA8D31C917797004F43F5 /* RegisteredApplication.m in Sources */,
 				6FACA8FA1C91934E004F43F5 /* RegisteredApplicationFactory.m in Sources */,
 				6FACA8F71C9189F0004F43F5 /* RegisteredApplicationListCD.m in Sources */,

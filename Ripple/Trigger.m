@@ -13,15 +13,18 @@
 
 @implementation Trigger
 
-+(void) trigger {
++(BOOL) trigger {
     
+    BOOL returnBool = NO;
     RegisteredApplicationList* list = [RegisteredApplicationFactory getDefaultApplicationList];
     
     if ([list count] > 0)
     {
         NSURL *myURL = [NSURL URLWithString:[[list objectAtIndex:0] url]];
-        NSLog(@"Triggering: %@", [myURL absoluteString]);
         [[UIApplication sharedApplication] openURL:myURL];
+        returnBool = YES;
     }
+    
+    return returnBool;
 }
 @end

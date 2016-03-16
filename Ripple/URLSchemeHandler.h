@@ -6,7 +6,7 @@
 //  Copyright © 2016 Daniel Llewellyn. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #ifndef RegisterURL
 #define RegisterURL "ripple://com.ripple.register"
@@ -22,6 +22,6 @@
  
  @returns success or not
  */
--(BOOL) handleWithUrl:(NSURL* _Nonnull) url andApplicationName:(NSString * _Nonnull) applicationName;
+-(UIAlertController* _Nullable) handleWithUrl:(NSURL* _Nonnull) url andApplicationName:(NSString * _Nonnull) applicationName;
 
 @end

@@ -11,12 +11,78 @@
 
 @interface ViewController ()
 
+@property CGRect bottomRect;
+
+@property UIView *innerView;
+
+@property UITextView *releaseText;
+
+@property CGRect resetLocation;
+
+@property BOOL isShown;
+
 @end
 
 @implementation ViewController
 
+
+- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
+{
+    CGPoint point = [[[event allTouches] anyObject] locationInView:self.view];
+    UIControl *control = sender;
+    control.center = point;
+    
+    if (CGRectContainsPoint(self.bottomRect, point))
+    {
+        [self.lblRelease setHidden:YES];
+        [self.lblSwipeDown setHidden:NO];
+    }
+    else
+    {
+        [self.lblRelease setHidden:NO];
+        [self.lblSwipeDown setHidden:YES];
+    }
+}
+
+- (IBAction) imageDropped:(id) sender withEvent:(UIEvent *) event
+{
+    CGPoint point = [[[event allTouches] anyObject] locationInView:self.view];
+    if (CGRectContainsPoint(self.bottomRect, point))
+    {
+        [self performSegueWithIdentifier:@"ShowCountdown" sender:self];
+    }
+    
+    self.btnTrigger.layer.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
+                                             self.resetLocation.origin.y,
+                                             self.resetLocation.size.height,
+                                             self.resetLocation.size.width);
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.btnTrigger addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [self.btnTrigger addTarget:self action:@selector(imageDropped:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+   
+    CGFloat y = CGRectGetMaxY(self.view.frame);
+    CGFloat x = CGRectGetMaxX(self.view.frame);
+    
+    self.bottomRect = CGRectMake(x / 2 - 100, // Half way, then minus the width
+                                 y - 200,
+                                 200,
+                                 200);
+    
+     self.innerView = [[UIView alloc] initWithFrame:self.bottomRect];
+    [self.innerView setBackgroundColor:[UIColor blackColor]];
+    [self.innerView.layer setCornerRadius:100];
+    
+    [self.view addSubview:self.innerView];
+    [self.view sendSubviewToBack:self.innerView];
+
+    self.resetLocation = self.btnTrigger.layer.frame;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

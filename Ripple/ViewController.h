@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+/** Main view controller. Drag down the drop to trigger */
 @interface ViewController : UIViewController
 
 // Trigger button
 @property IBOutlet UIButton *btnTrigger;
+
+// Release me label
+@property IBOutlet UILabel *lblSwipeDown;
+
+// Release
+@property IBOutlet UILabel *lblRelease;
 
 /**
  Perform trigger action

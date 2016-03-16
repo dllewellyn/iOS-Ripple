@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Trigger-->
         <scene sceneID="t2K-Cp-3mR">
             <objects>
                 <viewController id="tmN-Mg-SR9" customClass="ViewController" sceneMemberID="viewController">
@@ -18,27 +18,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGa-t5-LWd">
-                                <rect key="frame" x="20" y="28" width="560" height="515"/>
-                                <state key="normal" title="Trigger"/>
-                                <connections>
-                                    <action selector="trigger:" destination="tmN-Mg-SR9" eventType="touchUpInside" id="Y91-d0-J8J"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGa-t5-LWd">
+                                <rect key="frame" x="250" y="76" width="97" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Gl2-eS-enN"/>
+                                    <constraint firstAttribute="height" constant="100" id="NFq-ZC-vFS"/>
+                                </constraints>
+                                <state key="normal" title="Trigger" image="ic_ripple_trigger_no_shadow.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe down to trigger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhb-0J-jYn">
+                                <rect key="frame" x="20" y="254" width="560" height="23"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Release to confirm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwi-ea-Mbb">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19513039579725711" green="0.63727817463072345" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nGa-t5-LWd" firstAttribute="trailing" secondItem="sMP-qm-1ZU" secondAttribute="trailingMargin" constant="10" id="4FI-K0-PCH"/>
-                            <constraint firstItem="nGa-t5-LWd" firstAttribute="leading" secondItem="sMP-qm-1ZU" secondAttribute="leadingMargin" constant="10" id="7HH-gm-nbK"/>
-                            <constraint firstItem="nGa-t5-LWd" firstAttribute="top" secondItem="6b1-tV-RFx" secondAttribute="bottom" constant="10" id="sen-PG-FT4"/>
-                            <constraint firstItem="NfL-r5-kKZ" firstAttribute="top" secondItem="nGa-t5-LWd" secondAttribute="bottom" constant="10" id="uac-AO-hMp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rwi-ea-Mbb" secondAttribute="leading" id="AF0-LH-x8t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rwi-ea-Mbb" secondAttribute="trailing" id="KpA-qX-uMg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fhb-0J-jYn" secondAttribute="trailing" id="Xz2-oC-PkP"/>
+                            <constraint firstItem="Rwi-ea-Mbb" firstAttribute="top" secondItem="fhb-0J-jYn" secondAttribute="bottom" constant="12" id="fNn-67-mV0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fhb-0J-jYn" secondAttribute="leading" id="hkt-fn-Gzj"/>
+                            <constraint firstItem="fhb-0J-jYn" firstAttribute="top" secondItem="6b1-tV-RFx" secondAttribute="bottom" constant="234" id="ixU-Yp-8V1"/>
+                            <constraint firstItem="nGa-t5-LWd" firstAttribute="centerX" secondItem="sMP-qm-1ZU" secondAttribute="centerX" id="mOm-0C-aqZ"/>
+                            <constraint firstItem="nGa-t5-LWd" firstAttribute="top" secondItem="6b1-tV-RFx" secondAttribute="bottom" constant="55" id="uos-i1-8i4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="0Je-LE-MVq"/>
+                    <tabBarItem key="tabBarItem" title="Trigger" image="TriggerImage" selectedImage="TriggerImage" id="0Je-LE-MVq"/>
+                    <connections>
+                        <outlet property="btnTrigger" destination="nGa-t5-LWd" id="YNs-EE-l6Q"/>
+                        <outlet property="lblRelease" destination="fhb-0J-jYn" id="VG7-bw-w8k"/>
+                        <outlet property="lblSwipeDown" destination="Rwi-ea-Mbb" id="1hx-eY-sJA"/>
+                        <segue destination="I6h-Io-EaG" kind="show" identifier="ShowCountdown" animates="NO" id="kDY-qe-IGS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqJ-Ne-OTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="599" y="-442"/>
+        </scene>
+        <!--Countdown View Controller-->
+        <scene sceneID="gYP-wc-zaL">
+            <objects>
+                <viewController id="I6h-Io-EaG" customClass="CountdownViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Znq-WS-CB7"/>
+                        <viewControllerLayoutGuide type="bottom" id="d1N-PF-ZoM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="odK-ib-cfo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDU-82-VXL">
+                                <rect key="frame" x="204" y="278" width="174" height="62"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19513039579999999" green="0.63727817460000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aDU-82-VXL" firstAttribute="centerX" secondItem="odK-ib-cfo" secondAttribute="centerX" id="gCb-VN-sWY"/>
+                            <constraint firstItem="aDU-82-VXL" firstAttribute="centerY" secondItem="odK-ib-cfo" secondAttribute="centerY" id="iZO-SY-a6i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblCountdown" destination="aDU-82-VXL" id="iGB-i0-dJx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52R-kW-gkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1291" y="-436"/>
         </scene>
         <!--Registered App Table View Controller-->
         <scene sceneID="Rzs-UG-XGx">
@@ -87,11 +145,11 @@
             </objects>
             <point key="canvasLocation" x="-221" y="-111"/>
         </scene>
-        <!--Item-->
+        <!--Responders-->
         <scene sceneID="yBb-QL-fV3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qkt-b5-lEM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Xns-5N-4e2"/>
+                    <tabBarItem key="tabBarItem" title="Responders" id="Xns-5N-4e2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kd8-4E-WXs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -107,4 +165,8 @@
             <point key="canvasLocation" x="599" y="309"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TriggerImage" width="25" height="25"/>
+        <image name="ic_ripple_trigger_no_shadow.png" width="417" height="417"/>
+    </resources>
 </document>

@@ -9,13 +9,41 @@
 #import "URLSchemeHandler.h"
 #import "RegisteredApplication.h"
 #import "RegisteredApplicationFactory.h"
-#import <UIKit/UIKit.h>
 #import "Trigger.h"
 
 @implementation URLSchemeHandler
 
--(BOOL) handleWithUrl:(NSURL* _Nonnull) url andApplicationName:(NSString * _Nonnull) applicationName {
-    BOOL success = NO;
+
+-(UIAlertController*) retrieveResponseToAdding:(BOOL) wasSuccess
+{
+    NSString *message =  wasSuccess ?  @"The URL has been been added" : @"The url could not be added";
+    UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"URL received"
+                                                                        message:message
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+    [controller addAction:cancel];
+    
+    return controller;
+}
+
+-(UIAlertController*) retrieveResponseToCompletion
+{
+    NSString *message = @"Operation complete";
+    UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"Done"
+                                                                        message:message
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+    [controller addAction:cancel];
+    
+    return controller;
+}
+
+-(UIAlertController* _Nullable) handleWithUrl:(NSURL* _Nonnull) url andApplicationName:(NSString * _Nonnull) applicationName
+{
+    
+    UIAlertController * returnController = nil;
     
     if ([[url absoluteString] containsString:@RegisterURL])
     {
@@ -25,22 +53,31 @@
                                                                                          andUrl:[NSString stringWithFormat:@"%@://%@",
                                                                                                  [url fragment],
                                                                                                  applicationName]];
-        if (app != nil) {
-            success = YES;
+        if (app != nil)
+        {
+            returnController = [self retrieveResponseToAdding:YES];
+        }
+        else
+        {
+            returnController = [self retrieveResponseToAdding:NO];
         }
         
     }
     else if ([[url absoluteString] isEqualToString:@CompleteURL])
     {
         [RegisteredApplicationFactory removeApplicationForNameAndDefaultType:applicationName];
-        [Trigger trigger];
+       
+        if (![Trigger trigger])
+        {
+            returnController = [self retrieveResponseToCompletion];
+        }
     }
     else
     {
         [NSException exceptionWithName:@"Invalid url" reason:@"URL is not valid" userInfo:nil];
     }
     
-    return success;
+    return returnController;
 }
 
 @end

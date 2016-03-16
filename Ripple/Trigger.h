@@ -10,6 +10,6 @@
 
 @interface Trigger : NSObject
 
-+(void) trigger;
++(BOOL) trigger;
 
 @end
