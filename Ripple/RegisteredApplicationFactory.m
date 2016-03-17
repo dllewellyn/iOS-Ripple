@@ -72,6 +72,7 @@ const NSInteger defaultType = CoreDataType;
         {
             NSLog(@"Removing: %@", app.url);
             [app removeItem];
+            [app save];
             // Let the delegate know
             [list dataChangedAtIndex:i];
         }

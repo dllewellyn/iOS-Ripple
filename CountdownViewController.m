@@ -59,7 +59,7 @@ const NSInteger TOTAL_COUNTDOWN = 5;
         
         if (!self.shouldCancel)
         {
-            if (![Trigger trigger])
+            if (![Trigger trigger:nil])
             {
                 UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Ops" message:@"There are no responders configured" preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {

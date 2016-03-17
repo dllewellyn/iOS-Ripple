@@ -89,7 +89,4 @@
     [super didReceiveMemoryWarning];
 }
 
--(IBAction) trigger:(id)sender {
-    [Trigger trigger];
-}
 @end

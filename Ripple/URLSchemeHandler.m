@@ -48,17 +48,23 @@
     UIAlertController * returnController = nil;
     
     DNLLUrlFormatter *formatter = [DNLLFormatterFactory getFormatterFor:url];
-    switch (formatter.urlType) {
+    
+    if (formatter == nil)
+    {
+       [NSException exceptionWithName:@"Invalid url" reason:@"URL is not valid" userInfo:nil];
+    }
+    
+    switch (formatter.urlType)
+    {
         case CompleteUrl:
-            [RegisteredApplicationFactory removeApplicationForNameAndDefaultType:applicationName];
-            
-            if (![Trigger trigger])
+            if (![Trigger trigger:applicationName])
             {
                 returnController = [self retrieveResponseToCompletion];
             }
             break;
             
-        case RegisterUrl: {
+        case RegisterUrl:
+        {
             DNLLRegisterUrl *regUrl =  (DNLLRegisterUrl *) formatter;
             
             // Register url

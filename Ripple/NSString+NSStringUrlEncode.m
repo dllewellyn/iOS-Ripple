@@ -18,7 +18,8 @@
     int sourceLen = (int) strlen((const char *)source);
     for (int i = 0; i < sourceLen; ++i) {
         const unsigned char thisChar = source[i];
-        if (thisChar == ' '){
+        if (thisChar == ' ')
+        {
             [output appendString:@"+"];
         } else if (thisChar == '.' || thisChar == '-' || thisChar == '_' || thisChar == '~' ||
                    (thisChar >= 'a' && thisChar <= 'z') ||

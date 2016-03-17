@@ -13,16 +13,38 @@
 
 @implementation Trigger
 
-+(BOOL) trigger {
++(BOOL) trigger:(NSString *) lastAppName {
     
     BOOL returnBool = NO;
     RegisteredApplicationList* list = [RegisteredApplicationFactory getDefaultApplicationList];
     
     if ([list count] > 0)
     {
-        NSURL *myURL = [NSURL URLWithString:[[list objectAtIndex:0] url]];
-        [[UIApplication sharedApplication] openURL:myURL];
-        returnBool = YES;
+        int i;
+        
+        if (lastAppName == nil)
+        {
+            i = 0;
+        }
+        else
+        {
+            for (i = 0; i < [list count]; i++)
+            {
+                RegisteredApplication * app = [list objectAtIndex:i];
+                if ([app.applicationName isEqualToString:lastAppName])
+                {
+                    i++;
+                    break;
+                }
+            }
+        }
+        
+        if (i < [list count])
+        {
+            
+            NSURL *myURL = [NSURL URLWithString:[[list objectAtIndex:i] url]];
+            returnBool = [[UIApplication sharedApplication] openURL:myURL];
+        }
     }
     
     return returnBool;

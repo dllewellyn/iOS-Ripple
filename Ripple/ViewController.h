@@ -20,9 +20,5 @@
 // Release
 @property IBOutlet UILabel *lblRelease;
 
-/**
- Perform trigger action
- */
--(IBAction) trigger:(id)sender;
 @end
 

@@ -10,7 +10,7 @@
 
 @implementation RegisteredApplication
 
--(instancetype) initWithUrl:(NSString*) url andApplicationName:(NSString*) applicationName {
+-(instancetype) initWithUrl:(NSString*) url andApplicationName:(NSString*) applicationName andAppDescription:(NSString * _Nonnull)applicationDescription {
     [[NSException exceptionWithName:@"Needs subclassing" reason:@"This class needs to be subclassed before use" userInfo:nil] raise];
     return nil;
 }

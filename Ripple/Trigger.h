@@ -10,6 +10,14 @@
 
 @interface Trigger : NSObject
 
-+(BOOL) trigger;
+/**
+ Trigger the panic
+ 
+ @param lastAppName the name of the last application that was triggered. Leave nil if you're
+ just triggering
+ 
+ @return whether or not there was any trigger
+ */
++(BOOL) trigger:(NSString *) lastAppName;
 
 @end
