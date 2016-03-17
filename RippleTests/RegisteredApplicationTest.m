@@ -42,12 +42,17 @@
 }
 
 - (void)testRegisteredApplicationThrowsException {
-    XCTAssertThrows([[RegisteredApplication alloc] initWithUrl:@"url" andApplicationName:@"test" andAppDescription:@"Test desc"]);
+    XCTAssertThrows([[RegisteredApplication alloc] initWithUrlScheme:@"url" andApplicationName:@"test" andAppDescription:@"Test desc"]);
 }
 
 - (void)testRegisteredApplicationThrowsExceptionOnSave {
     RegisteredApplication *app = [[RegisteredApplication alloc] init];
     XCTAssertThrows([app save]);
+}
+
+-(void) testRegisteredApplicationThrowsExceptionOnRemoveItem {
+    RegisteredApplication *app = [[RegisteredApplication alloc] init];
+    XCTAssertThrows([app removeItem]);
 }
 
 @end

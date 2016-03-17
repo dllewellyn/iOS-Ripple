@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
 #import "RegisteredApplicationFactory.h"
+#import "DNLLTriggerUrl.h"
 
 @implementation Trigger
 
@@ -41,9 +42,14 @@
         
         if (i < [list count])
         {
+
+            RegisteredApplication *app = [list objectAtIndex:i];
+            DNLLTriggerUrl *triggerUrl = [[DNLLTriggerUrl alloc] initWith:app.applicationName andTriggerType:app.urlScheme];
             
-            NSURL *myURL = [NSURL URLWithString:[[list objectAtIndex:i] url]];
-            returnBool = [[UIApplication sharedApplication] openURL:myURL];
+            if (triggerUrl.url != nil)
+            {
+                returnBool = [[UIApplication sharedApplication] openURL:triggerUrl.url];
+            }
         }
     }
     

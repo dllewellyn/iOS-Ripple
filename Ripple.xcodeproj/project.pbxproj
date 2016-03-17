@@ -42,6 +42,10 @@
 		6FACA9031C91C31E004F43F5 /* URLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */; };
 		6FACA9051C91CD9C004F43F5 /* UrlSchemeHandlertest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA9041C91CD9C004F43F5 /* UrlSchemeHandlertest.m */; };
 		6FB1CF681C974079009652CF /* RegisteredAppTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB1CF671C974079009652CF /* RegisteredAppTableViewController.m */; };
+		6FCC1F321C9ADBA90014A43B /* DNLLCompletionUrlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCC1F311C9ADBA90014A43B /* DNLLCompletionUrlTest.m */; };
+		6FCC1F341C9ADC440014A43B /* FormatterFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCC1F331C9ADC440014A43B /* FormatterFactoryTest.m */; };
+		6FCC1F371C9AE2090014A43B /* DNLLTriggerUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCC1F361C9AE2090014A43B /* DNLLTriggerUrl.m */; };
+		6FCC1F391C9AE3EE0014A43B /* TestTriggerUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCC1F381C9AE3EE0014A43B /* TestTriggerUrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,11 @@
 		6FACA9041C91CD9C004F43F5 /* UrlSchemeHandlertest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlSchemeHandlertest.m; sourceTree = "<group>"; };
 		6FB1CF661C974079009652CF /* RegisteredAppTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredAppTableViewController.h; sourceTree = "<group>"; };
 		6FB1CF671C974079009652CF /* RegisteredAppTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredAppTableViewController.m; sourceTree = "<group>"; };
+		6FCC1F311C9ADBA90014A43B /* DNLLCompletionUrlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLCompletionUrlTest.m; sourceTree = "<group>"; };
+		6FCC1F331C9ADC440014A43B /* FormatterFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterFactoryTest.m; sourceTree = "<group>"; };
+		6FCC1F351C9AE2090014A43B /* DNLLTriggerUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLTriggerUrl.h; sourceTree = "<group>"; };
+		6FCC1F361C9AE2090014A43B /* DNLLTriggerUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLTriggerUrl.m; sourceTree = "<group>"; };
+		6FCC1F381C9AE3EE0014A43B /* TestTriggerUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTriggerUrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +168,8 @@
 				6F052C9D1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m */,
 				6F052C9F1C9ABE8A00AF8312 /* DNLLCompleteUrl.h */,
 				6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */,
+				6FCC1F351C9AE2090014A43B /* DNLLTriggerUrl.h */,
+				6FCC1F361C9AE2090014A43B /* DNLLTriggerUrl.m */,
 			);
 			name = Formatter;
 			sourceTree = "<group>";
@@ -226,6 +237,9 @@
 				6FACA8FF1C91BBB7004F43F5 /* AppDelegateTest.m */,
 				6FACA9041C91CD9C004F43F5 /* UrlSchemeHandlertest.m */,
 				6F052C921C9AB1DD00AF8312 /* UrlFormatter.m */,
+				6FCC1F311C9ADBA90014A43B /* DNLLCompletionUrlTest.m */,
+				6FCC1F331C9ADC440014A43B /* FormatterFactoryTest.m */,
+				6FCC1F381C9AE3EE0014A43B /* TestTriggerUrl.m */,
 			);
 			path = RippleTests;
 			sourceTree = "<group>";
@@ -370,6 +384,7 @@
 				6FACA8D31C917797004F43F5 /* RegisteredApplication.m in Sources */,
 				6F052C961C9AB2F700AF8312 /* DNLLRegisterUrl.m in Sources */,
 				6FACA8FA1C91934E004F43F5 /* RegisteredApplicationFactory.m in Sources */,
+				6FCC1F371C9AE2090014A43B /* DNLLTriggerUrl.m in Sources */,
 				6FACA8F71C9189F0004F43F5 /* RegisteredApplicationListCD.m in Sources */,
 				6F052C901C9AAE1800AF8312 /* DNLLUrlFormatter.m in Sources */,
 				6FACA8B21C916F92004F43F5 /* ViewController.m in Sources */,
@@ -390,6 +405,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FCC1F321C9ADBA90014A43B /* DNLLCompletionUrlTest.m in Sources */,
+				6FCC1F391C9AE3EE0014A43B /* TestTriggerUrl.m in Sources */,
+				6FCC1F341C9ADC440014A43B /* FormatterFactoryTest.m in Sources */,
 				6FACA8DA1C917ADD004F43F5 /* RegisteredApplicationListTest.m in Sources */,
 				6FACA8EC1C9182BA004F43F5 /* RegisteredApplicationCDTest.m in Sources */,
 				6FACA8D81C9179E0004F43F5 /* RegisteredApplicationTest.m in Sources */,

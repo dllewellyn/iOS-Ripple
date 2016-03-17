@@ -36,7 +36,7 @@ typedef enum {
  @param url url of the application
  @param applicationDescription description of the application
  */
-+(RegisteredApplication* _Nullable) createApplicationForType:(NSInteger) type andApplicationName:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url
++(RegisteredApplication* _Nullable) createApplicationForType:(NSInteger) type andApplicationName:(NSString * _Nonnull) applicationName andUrlScheme:(NSString * _Nonnull) url
                                    andApplicationDescription:(NSString * _Nonnull) applicationDescription;
 
 /**
@@ -45,7 +45,7 @@ typedef enum {
  @param applicationName name of the application
  @param url url of the application
  */
-+(RegisteredApplication* _Nullable) createApplicationDefaultType:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url
++(RegisteredApplication* _Nullable) createApplicationDefaultType:(NSString * _Nonnull) applicationName andUrlScheme:(NSString * _Nonnull) url
                                        andApplicationDescription:(NSString * _Nonnull) applicationDescription;
 
 /**

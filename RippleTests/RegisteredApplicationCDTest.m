@@ -46,7 +46,7 @@
     NSString *appName = @"Application name";
     NSString *desc = @"appDesc";
     
-    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:appName andAppDescription:desc];
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrlScheme:url andApplicationName:appName andAppDescription:desc];
     [racd save];
 
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"applicationName == %@", appName];
@@ -62,9 +62,9 @@
     XCTAssert([retArr count] > 0);
     
     
-    RegisteredApplication *obj = [retArr objectAtIndex:0];
+    RegisteredApplication *obj = [[RegisteredApplicationCD alloc] initWithUnderlyingObject:[retArr objectAtIndex:0]];
     XCTAssert([obj.applicationName isEqualToString:appName]);
-    XCTAssert([obj.url isEqualToString:url]);
+    XCTAssert([obj.urlScheme isEqualToString:url]);
     
 }
 
@@ -75,10 +75,10 @@
     
     NSString *otherUrl = @"com.alternative.url";
     
-    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:appName andAppDescription:appDesc];
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrlScheme:url andApplicationName:appName andAppDescription:appDesc];
     [racd save];
     
-    racd.url = otherUrl;
+    racd.urlScheme = otherUrl;
     
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"applicationName == %@", appName];
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@ENTITY_NAME];
@@ -92,16 +92,17 @@
     XCTAssertNotNil(retArr);
     XCTAssert([retArr count] > 0);
     
-    RegisteredApplication *obj = [retArr objectAtIndex:0];
+ RegisteredApplication *obj = [[RegisteredApplicationCD alloc] initWithUnderlyingObject:[retArr objectAtIndex:0]];
     XCTAssert([obj.applicationName isEqualToString:appName]);
-    XCTAssert([obj.url isEqualToString:otherUrl]);
+   
+
 }
 
 -(void) testThatWecanDeleteAnObjectfromCd {
     NSString *appName = @"app name";
     NSString *appDesc = @"This+is+a+test+app+description";
     
-    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:@"url"  andApplicationName:appName andAppDescription:appDesc];
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrlScheme:@"url"  andApplicationName:appName andAppDescription:appDesc];
     [racd save];
     
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"applicationName == %@", appName];

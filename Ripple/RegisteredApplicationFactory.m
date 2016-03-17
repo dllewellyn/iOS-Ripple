@@ -37,13 +37,13 @@ const NSInteger defaultType = CoreDataType;
     return [self getApplicationList:defaultType];
 }
 
-+(RegisteredApplication* _Nullable) createApplicationForType:(NSInteger) type andApplicationName:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url
++(RegisteredApplication* _Nullable) createApplicationForType:(NSInteger) type andApplicationName:(NSString * _Nonnull) applicationName andUrlScheme:(NSString * _Nonnull) url
                                    andApplicationDescription:(NSString * _Nonnull)applicationDescription {
     RegisteredApplication *application = nil;
     
     switch (type) {
         case CoreDataType:
-            application = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:applicationName andAppDescription:applicationDescription];
+            application = [[RegisteredApplicationCD alloc] initWithUrlScheme:url andApplicationName:applicationName andAppDescription:applicationDescription];
             [[self getApplicationList:type] dataAdded:application];
             break;
         default:
@@ -54,8 +54,8 @@ const NSInteger defaultType = CoreDataType;
     return application;
 }
 
-+(RegisteredApplication* _Nullable) createApplicationDefaultType:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url andApplicationDescription:(NSString * _Nonnull)applicationDescription {
-    RegisteredApplication* app = [self createApplicationForType:defaultType andApplicationName:applicationName andUrl:url andApplicationDescription:applicationDescription];
++(RegisteredApplication* _Nullable) createApplicationDefaultType:(NSString * _Nonnull) applicationName andUrlScheme:(NSString * _Nonnull) url andApplicationDescription:(NSString * _Nonnull)applicationDescription {
+    RegisteredApplication* app = [self createApplicationForType:defaultType andApplicationName:applicationName andUrlScheme:url andApplicationDescription:applicationDescription];
     [app save];
     return app;
 }
@@ -70,7 +70,6 @@ const NSInteger defaultType = CoreDataType;
         
         if ([appName isEqualToString:app.applicationName])
         {
-            NSLog(@"Removing: %@", app.url);
             [app removeItem];
             [app save];
             // Let the delegate know

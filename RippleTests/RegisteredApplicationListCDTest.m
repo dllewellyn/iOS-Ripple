@@ -51,10 +51,10 @@
     NSString *url2 = @"com.example.url2";
     NSString *appName2 = @"Application name2";
     
-    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:appName andAppDescription:appDesc];
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrlScheme:url andApplicationName:appName andAppDescription:appDesc];
     [racd save];
     
-    RegisteredApplication *racd1 = [[RegisteredApplicationCD alloc] initWithUrl:url2 andApplicationName:appName2 andAppDescription:appDesc];
+    RegisteredApplication *racd1 = [[RegisteredApplicationCD alloc] initWithUrlScheme:url2 andApplicationName:appName2 andAppDescription:appDesc];
     [racd1 save];
     
     RegisteredApplicationListCD *list = [[RegisteredApplicationListCD alloc] initFromDataSource];
@@ -67,8 +67,8 @@
     XCTAssert([cd1.applicationName isEqualToString:appName]);
     XCTAssert([cd2.applicationName isEqualToString:appName2]);
     
-    XCTAssert([cd1.url isEqualToString:url]);
-    XCTAssert([cd2.url isEqualToString:url2]);
+    XCTAssert([cd1.urlScheme isEqualToString:url]);
+    XCTAssert([cd2.urlScheme isEqualToString:url2]);
     
     XCTAssert([racd.applicationDescription isEqualToString:appDesc]);
     XCTAssert([racd1.applicationDescription isEqualToString:appDesc]);

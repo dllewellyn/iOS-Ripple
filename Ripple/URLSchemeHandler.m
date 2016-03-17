@@ -68,11 +68,8 @@
             DNLLRegisterUrl *regUrl =  (DNLLRegisterUrl *) formatter;
             
             // Register url
-            RegisteredApplication *app = [RegisteredApplicationFactory createApplicationDefaultType:applicationName
-                                                                                             andUrl:[NSString stringWithFormat:@"%@://%@",
-                                                                                                     regUrl.responseName,
-                                                                                                     applicationName]
-                                                                          andApplicationDescription:regUrl.appDescription];
+            RegisteredApplication *app = [RegisteredApplicationFactory createApplicationDefaultType:applicationName andUrlScheme:regUrl.responseName
+                                                andApplicationDescription:regUrl.appDescription];
             if (app != nil)
             {
                 returnController = [self retrieveResponseToAdding:YES];

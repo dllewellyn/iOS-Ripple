@@ -16,6 +16,6 @@
  @param url
  @return 
  */
-+(DNLLUrlFormatter *) getFormatterFor:(NSURL * _Nonnull) url;
++(DNLLUrlFormatter * _Nullable) getFormatterFor:(NSURL * _Nonnull) url;
 
 @end

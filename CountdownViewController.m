@@ -51,7 +51,7 @@ const NSInteger TOTAL_COUNTDOWN = 5;
 -(void) updateCountdown {
     
     self.countdownRemaining--;
-    [self.lblCountdown setText:[NSString stringWithFormat:@"%ld", self.countdownRemaining]];
+    [self.lblCountdown setText:[NSString stringWithFormat:@"%ld", (long)self.countdownRemaining]];
     
     if (self.countdownRemaining <= 0)
     {

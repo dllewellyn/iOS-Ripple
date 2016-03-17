@@ -13,7 +13,7 @@
     RegisteredApplicationEntity *_underlyingObject;
 }
 
-@property (nonatomic, setter=setUrl:) NSString *url;
+@property (nonatomic, setter=setUrlScheme:) NSString *urlScheme;
 @property (nonatomic, setter=setAppName:) NSString *applicationName;
 @property (nonatomic, setter=setApplicationDescription:) NSString *applicationDescription;
 
@@ -21,7 +21,7 @@
 
 @implementation RegisteredApplicationCD
 
-@synthesize url = _url;
+@synthesize urlScheme = _url;
 @synthesize applicationName = _applicationName;
 @synthesize applicationDescription = _applicationDescription;
 
@@ -30,8 +30,7 @@
     _applicationName = applicationName;
 }
 
-
--(void) setUrl:(NSString * _Nonnull) url {
+-(void) setUrlScheme:(NSString * _Nonnull) url {
     _underlyingObject.url = url;
     _url = url;
 }
@@ -51,7 +50,7 @@
     return self;
 }
 
--(instancetype _Nonnull) initWithUrl:(NSString* _Nonnull) url andApplicationName:(NSString* _Nonnull) applicationName andAppDescription:(NSString * _Nonnull) applicationDescription {
+-(instancetype _Nonnull) initWithUrlScheme:(NSString* _Nonnull) urlScheme andApplicationName:(NSString* _Nonnull) applicationName andAppDescription:(NSString * _Nonnull) applicationDescription {
     self = [super init];
     
     if (self == nil) {
@@ -64,7 +63,7 @@
     _underlyingObject = [NSEntityDescription insertNewObjectForEntityForName:@ENTITY_NAME
                                   inManagedObjectContext:handler.managedObjectContext];
     
-    self.url = url;
+    self.urlScheme = urlScheme;
     self.applicationName = applicationName;
     self.applicationDescription = applicationDescription;
     

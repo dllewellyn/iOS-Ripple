@@ -20,7 +20,7 @@
  @param url the URL that we can open in order to trigger panic for a given app
  @param applicationName name of the application
  */
--(instancetype _Nonnull) initWithUrl:(NSString* _Nonnull) url andApplicationName:(NSString* _Nonnull) applicationName andAppDescription:(NSString * _Nonnull) applicationDescription;
+-(instancetype _Nonnull) initWithUrlScheme:(NSString* _Nonnull) urlScheme andApplicationName:(NSString* _Nonnull) applicationName andAppDescription:(NSString * _Nonnull) applicationDescription;
 
 /**
  Save this object to whatever subclassed storage handler
@@ -33,7 +33,7 @@
 -(void) removeItem;
 
 // Url
-@property NSString * _Nullable url;
+@property NSString * _Nullable urlScheme;
 
 // Application name
 @property NSString * _Nullable applicationName;

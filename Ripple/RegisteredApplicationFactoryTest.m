@@ -34,14 +34,14 @@
 }
 
 -(void) testTryingToAddWithAWrongInputParamsThrowsException {
-    XCTAssertThrows([RegisteredApplicationFactory createApplicationForType:-1 andApplicationName:@"App name" andUrl:@"Url" andApplicationDescription:@"Test"]);
+    XCTAssertThrows([RegisteredApplicationFactory createApplicationForType:-1 andApplicationName:@"App name" andUrlScheme:@"Url" andApplicationDescription:@"Test"]);
 }
 
 -(void) testThatTryingToCreateAUrlWorksCorrectlyWithValidIshValues {
     NSString *url = @"Url";
     NSString *appName = @"Application name";
     
-    RegisteredApplication * reg = [RegisteredApplicationFactory createApplicationDefaultType:appName andUrl:url andApplicationDescription:@"Test"];
+    RegisteredApplication * reg = [RegisteredApplicationFactory createApplicationDefaultType:appName andUrlScheme:url andApplicationDescription:@"Test"];
     XCTAssertNotNil(reg);
     
     RegisteredApplicationList *list = [RegisteredApplicationFactory getDefaultApplicationList];

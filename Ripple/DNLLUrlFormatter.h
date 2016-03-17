@@ -12,7 +12,8 @@
 
 typedef enum {
     RegisterUrl = 0, // Register a URL in the database
-    CompleteUrl = 1
+    CompleteUrl = 1, // URL for when an app has completed wipe
+    TriggerUrl = 2
 } UrlTypes;
 
 /** 
@@ -32,5 +33,8 @@ typedef enum {
 
 // Url type that should conform to the 'UrlTypes' in the enum
 @property NSInteger urlType;
+
+// Url which should be set by the subclass
+@property NSURL * _Nullable url;
 
 @end
