@@ -14,7 +14,7 @@
 
 @implementation Trigger
 
-+(BOOL) trigger:(NSString *) lastAppName {
++(BOOL) trigger:(NSString *) lastAppName andIsTest:(BOOL) isTest {
     
     BOOL returnBool = NO;
     RegisteredApplicationList* list = [RegisteredApplicationFactory getDefaultApplicationList];
@@ -44,7 +44,7 @@
         {
 
             RegisteredApplication *app = [list objectAtIndex:i];
-            DNLLTriggerUrl *triggerUrl = [[DNLLTriggerUrl alloc] initWith:app.applicationName andTriggerType:app.urlScheme];
+            DNLLTriggerUrl *triggerUrl = [[DNLLTriggerUrl alloc] initWith:app.applicationName andTriggerType:app.urlScheme andIsTest:isTest];
             
             if (triggerUrl.url != nil)
             {

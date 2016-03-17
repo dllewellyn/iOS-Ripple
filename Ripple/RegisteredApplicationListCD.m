@@ -28,11 +28,11 @@
     
     CoreDataHandler *handler = [CoreDataHandler sharedInstance];
     
-    NSArray<RegisteredApplicationEntity*> *entities = [handler.managedObjectContext executeFetchRequest:request
-                                                                                                error:&error];
+    NSArray<RegisteredApplicationEntity*> *entities = [handler.managedObjectContext executeFetchRequest:request error:&error];
     self.internalHolder = [[NSMutableArray alloc] init];
     
-    for (RegisteredApplicationEntity *entity in entities) {
+    for (RegisteredApplicationEntity *entity in entities)
+    {
         RegisteredApplicationCD *app = [[RegisteredApplicationCD alloc] initWithUnderlyingObject:entity];
         [self.internalHolder addObject:app];
     }

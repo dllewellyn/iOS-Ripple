@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Trigger.h"
+#import "CountdownViewController.h"
 
 @interface ViewController ()
 
@@ -59,8 +60,12 @@
     
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self endTestMode];
     
     [self.btnTrigger addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [self.btnTrigger addTarget:self action:@selector(imageDropped:withEvent:) forControlEvents:UIControlEventTouchUpInside];
@@ -89,4 +94,39 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowCountdown"])
+    {
+        CountdownViewController* vc = (CountdownViewController*)[segue destinationViewController];
+        vc.isTest = self.isTest;
+    }
+}
+
+#pragma UI Actions
+
+// When the toggle on screen is changed
+-(IBAction) toggleTestMode:(id)sender {
+    UISwitch * switchTestOnOff = (UISwitch*) sender;
+    if (switchTestOnOff.isOn)
+    {
+        [self startTestMode];
+    }
+    else
+    {
+        [self endTestMode];
+    }
+}
+
+// Start the test mode
+-(void) startTestMode {
+    self.isTest = YES;
+    [self.lblTestRun setHidden:NO];
+}
+
+// End test mode
+-(void) endTestMode {
+    self.isTest = NO;
+    [self.lblTestRun setHidden:YES];
+}
 @end
+

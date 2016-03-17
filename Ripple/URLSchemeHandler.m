@@ -57,7 +57,7 @@
     switch (formatter.urlType)
     {
         case CompleteUrl:
-            if (![Trigger trigger:applicationName])
+            if (![Trigger trigger:applicationName andIsTest:NO])
             {
                 returnController = [self retrieveResponseToCompletion];
             }

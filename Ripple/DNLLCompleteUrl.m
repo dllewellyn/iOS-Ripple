@@ -12,9 +12,7 @@
 
 -(instancetype _Nullable) initWithUrl:(NSURL * _Nonnull) url {
     self = [super init];
-    
     self.urlType = CompleteUrl;
-    
     return self;
 }
 @end

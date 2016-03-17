@@ -19,6 +19,7 @@
  
  @returns an instance of DNLL Trigger URL
  */
--(instancetype _Nullable) initWith:(NSString* _Nonnull) applicationName andTriggerType:(NSString* _Nonnull) triggerScheme;
+-(instancetype _Nullable) initWith:(NSString* _Nonnull) applicationName andTriggerType:(NSString* _Nonnull) triggerScheme andIsTest:(BOOL) isTest;
+
 
 @end

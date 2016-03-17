@@ -14,6 +14,12 @@
 // Countdown label
 @property IBOutlet UILabel *lblCountdown;
 
+// Label to let them user know this is a test
+@property IBOutlet UILabel *lblTest;
+
+// Let the user know that this is a test
+@property BOOL isTest;
+
 /**
  Cancel the trigger
  

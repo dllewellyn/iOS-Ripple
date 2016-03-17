@@ -20,5 +20,15 @@
 // Release
 @property IBOutlet UILabel *lblRelease;
 
+// Are we running a test? Let the user know
+@property IBOutlet UILabel *lblTestRun;
+
+// Toggle test mode on and off
+-(IBAction) toggleTestMode:(id)sender;
+
+// Are we doing a test run
+@property BOOL isTest;
+
+
 @end
 

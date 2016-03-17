@@ -36,6 +36,9 @@ const NSInteger TOTAL_COUNTDOWN = 5;
     [[UITapGestureRecognizer alloc] initWithTarget:self
                                             action:@selector(cancel:)];
     [self.view addGestureRecognizer:singleFingerTap];
+    
+    // Show test label if it's a test countdown
+    [self.lblTest setHidden:!self.isTest];
 }
 
 -(IBAction) cancel: (UIEvent *) event {
@@ -59,7 +62,7 @@ const NSInteger TOTAL_COUNTDOWN = 5;
         
         if (!self.shouldCancel)
         {
-            if (![Trigger trigger:nil])
+            if (![Trigger trigger:nil andIsTest:self.isTest])
             {
                 UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Ops" message:@"There are no responders configured" preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
@@ -79,15 +82,5 @@ const NSInteger TOTAL_COUNTDOWN = 5;
 
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

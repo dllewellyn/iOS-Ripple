@@ -13,13 +13,18 @@
 // Format for the trigger is scheme://appName
 NSString *triggerFormat = @"%@://%@";
 
--(instancetype _Nullable) initWith:(NSString* _Nonnull) applicationName andTriggerType:(NSString* _Nonnull) triggerScheme {
+// Trigger for a test
+NSString *testTriggerFormat = @"%@://%@.test";
+
+-(instancetype _Nullable) initWith:(NSString* _Nonnull) applicationName andTriggerType:(NSString* _Nonnull) triggerScheme andIsTest:(BOOL) isTest {
     
     self = [super init];
     
     if (self != nil)
     {
-        NSString *urlString = [NSString stringWithFormat:triggerFormat,
+        NSString *fmtString = isTest ? testTriggerFormat : triggerFormat;
+        
+        NSString *urlString = [NSString stringWithFormat:fmtString,
                            triggerScheme, applicationName];
         self.url = [NSURL URLWithString:urlString];
         self.urlType = TriggerUrl;

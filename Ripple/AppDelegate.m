@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "URLSchemeHandler.h"
-
+#import "CoreDataHandler.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
+    [CoreDataHandler sharedInstance]; //Setup core data early
     return YES;
 }
 

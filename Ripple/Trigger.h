@@ -15,9 +15,10 @@
  
  @param lastAppName the name of the last application that was triggered. Leave nil if you're
  just triggering
+ @param isTest are we executing the test url schemes?
  
  @return whether or not there was any trigger
  */
-+(BOOL) trigger:(NSString *) lastAppName;
++(BOOL) trigger:(NSString *) lastAppName andIsTest:(BOOL) isTest;
 
 @end
