@@ -10,6 +10,8 @@
 #import "RegisteredApplication.h"
 #import "RegisteredApplicationFactory.h"
 #import "Trigger.h"
+#import "DNLLFormatterFactory.h"
+#import "DNLLRegisterUrl.h"
 
 @implementation URLSchemeHandler
 
@@ -45,37 +47,42 @@
     
     UIAlertController * returnController = nil;
     
-    if ([[url absoluteString] containsString:@RegisterURL])
-    {
-        
-        // Register url
-        RegisteredApplication *app = [RegisteredApplicationFactory createApplicationDefaultType:applicationName
-                                                                                         andUrl:[NSString stringWithFormat:@"%@://%@",
-                                                                                                 [url fragment],
-                                                                                                 applicationName]];
-        if (app != nil)
-        {
-            returnController = [self retrieveResponseToAdding:YES];
+    DNLLUrlFormatter *formatter = [DNLLFormatterFactory getFormatterFor:url];
+    switch (formatter.urlType) {
+        case CompleteUrl:
+            [RegisteredApplicationFactory removeApplicationForNameAndDefaultType:applicationName];
+            
+            if (![Trigger trigger])
+            {
+                returnController = [self retrieveResponseToCompletion];
+            }
+            break;
+            
+        case RegisterUrl: {
+            DNLLRegisterUrl *regUrl =  (DNLLRegisterUrl *) formatter;
+            
+            // Register url
+            RegisteredApplication *app = [RegisteredApplicationFactory createApplicationDefaultType:applicationName
+                                                                                             andUrl:[NSString stringWithFormat:@"%@://%@",
+                                                                                                     regUrl.responseName,
+                                                                                                     applicationName]
+                                                                          andApplicationDescription:regUrl.appDescription];
+            if (app != nil)
+            {
+                returnController = [self retrieveResponseToAdding:YES];
+            }
+            else
+            {
+                returnController = [self retrieveResponseToAdding:NO];
+            }
+            
+            break;
         }
-        else
-        {
-            returnController = [self retrieveResponseToAdding:NO];
-        }
-        
-    }
-    else if ([[url absoluteString] isEqualToString:@CompleteURL])
-    {
-        [RegisteredApplicationFactory removeApplicationForNameAndDefaultType:applicationName];
-       
-        if (![Trigger trigger])
-        {
-            returnController = [self retrieveResponseToCompletion];
-        }
-    }
-    else
-    {
-        [NSException exceptionWithName:@"Invalid url" reason:@"URL is not valid" userInfo:nil];
-    }
+           
+        default:
+            [NSException exceptionWithName:@"Invalid url" reason:@"URL is not valid" userInfo:nil];
+            break;
+    };
     
     return returnController;
 }

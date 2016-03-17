@@ -28,8 +28,12 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *,
+                     id> *)options {
     
+    NSString *sourceApplication = [options objectForKey:@"UIApplicationOpenURLOptionsSourceApplicationKey"];
     if (url != nil && sourceApplication != nil)
     {
         URLSchemeHandler *handler = [[URLSchemeHandler alloc] init];

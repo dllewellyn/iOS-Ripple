@@ -34,8 +34,10 @@ typedef enum {
  @param type the type (see RegisteredApplicationTypes)
  @param applicationName name of the application
  @param url url of the application
+ @param applicationDescription description of the application
  */
-+(RegisteredApplication* _Nullable) createApplicationForType:(NSInteger) type andApplicationName:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url;
++(RegisteredApplication* _Nullable) createApplicationForType:(NSInteger) type andApplicationName:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url
+                                   andApplicationDescription:(NSString * _Nonnull) applicationDescription;
 
 /**
  Get a registered application with the default type of application storage
@@ -43,7 +45,8 @@ typedef enum {
  @param applicationName name of the application
  @param url url of the application
  */
-+(RegisteredApplication* _Nullable) createApplicationDefaultType:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url;
++(RegisteredApplication* _Nullable) createApplicationDefaultType:(NSString * _Nonnull) applicationName andUrl:(NSString * _Nonnull) url
+                                       andApplicationDescription:(NSString * _Nonnull) applicationDescription;
 
 /**
  Given a particular application name, and the type of storage delete the application from the database

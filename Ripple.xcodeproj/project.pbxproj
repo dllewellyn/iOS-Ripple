@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		6F052C871C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F052C861C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png */; };
 		6F052C8D1C99659B00AF8312 /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C8C1C99659B00AF8312 /* CountdownViewController.m */; };
+		6F052C901C9AAE1800AF8312 /* DNLLUrlFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C8F1C9AAE1800AF8312 /* DNLLUrlFormatter.m */; };
+		6F052C931C9AB1DD00AF8312 /* UrlFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C921C9AB1DD00AF8312 /* UrlFormatter.m */; };
+		6F052C961C9AB2F700AF8312 /* DNLLRegisterUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C951C9AB2F700AF8312 /* DNLLRegisterUrl.m */; };
+		6F052C991C9AB3C800AF8312 /* DNLLFormatterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C981C9AB3C800AF8312 /* DNLLFormatterFactory.m */; };
+		6F052C9B1C9AB7D000AF8312 /* RegisterUrlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C9A1C9AB7D000AF8312 /* RegisterUrlTest.m */; };
+		6F052C9E1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C9D1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m */; };
+		6F052CA11C9ABE8A00AF8312 /* DNLLCompleteUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */; };
 		6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F70921C980E3C0010CA9B /* Trigger.m */; };
 		6FACA8AC1C916F92004F43F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AB1C916F92004F43F5 /* main.m */; };
 		6FACA8AF1C916F92004F43F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AE1C916F92004F43F5 /* AppDelegate.m */; };
@@ -51,6 +58,18 @@
 		6F052C861C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_ripple_trigger_no_shadow.png; sourceTree = "<group>"; };
 		6F052C8B1C99659B00AF8312 /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountdownViewController.h; path = ../CountdownViewController.h; sourceTree = "<group>"; };
 		6F052C8C1C99659B00AF8312 /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountdownViewController.m; path = ../CountdownViewController.m; sourceTree = "<group>"; };
+		6F052C8E1C9AAE1800AF8312 /* DNLLUrlFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLUrlFormatter.h; sourceTree = "<group>"; };
+		6F052C8F1C9AAE1800AF8312 /* DNLLUrlFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLUrlFormatter.m; sourceTree = "<group>"; };
+		6F052C921C9AB1DD00AF8312 /* UrlFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlFormatter.m; sourceTree = "<group>"; };
+		6F052C941C9AB2F700AF8312 /* DNLLRegisterUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLRegisterUrl.h; sourceTree = "<group>"; };
+		6F052C951C9AB2F700AF8312 /* DNLLRegisterUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLRegisterUrl.m; sourceTree = "<group>"; };
+		6F052C971C9AB3C800AF8312 /* DNLLFormatterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLFormatterFactory.h; sourceTree = "<group>"; };
+		6F052C981C9AB3C800AF8312 /* DNLLFormatterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLFormatterFactory.m; sourceTree = "<group>"; };
+		6F052C9A1C9AB7D000AF8312 /* RegisterUrlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterUrlTest.m; path = ../Ripple/RegisterUrlTest.m; sourceTree = "<group>"; };
+		6F052C9C1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringUrlEncode.h"; sourceTree = "<group>"; };
+		6F052C9D1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringUrlEncode.m"; sourceTree = "<group>"; };
+		6F052C9F1C9ABE8A00AF8312 /* DNLLCompleteUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLCompleteUrl.h; sourceTree = "<group>"; };
+		6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLCompleteUrl.m; sourceTree = "<group>"; };
 		6F7F70911C980E3C0010CA9B /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
 		6F7F70921C980E3C0010CA9B /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
 		6FACA8A71C916F92004F43F5 /* Ripple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripple.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +146,23 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		6F052C911C9AAE1D00AF8312 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				6F052C8E1C9AAE1800AF8312 /* DNLLUrlFormatter.h */,
+				6F052C8F1C9AAE1800AF8312 /* DNLLUrlFormatter.m */,
+				6F052C941C9AB2F700AF8312 /* DNLLRegisterUrl.h */,
+				6F052C951C9AB2F700AF8312 /* DNLLRegisterUrl.m */,
+				6F052C971C9AB3C800AF8312 /* DNLLFormatterFactory.h */,
+				6F052C981C9AB3C800AF8312 /* DNLLFormatterFactory.m */,
+				6F052C9C1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.h */,
+				6F052C9D1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m */,
+				6F052C9F1C9ABE8A00AF8312 /* DNLLCompleteUrl.h */,
+				6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */,
+			);
+			name = Formatter;
+			sourceTree = "<group>";
+		};
 		6FACA89E1C916F92004F43F5 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +198,7 @@
 				6FACA8AA1C916F92004F43F5 /* Supporting Files */,
 				6FACA9011C91C31E004F43F5 /* URLSchemeHandler.h */,
 				6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */,
+				6F052C911C9AAE1D00AF8312 /* Formatter */,
 			);
 			path = Ripple;
 			sourceTree = "<group>";
@@ -178,6 +215,7 @@
 		6FACA8C31C916F92004F43F5 /* RippleTests */ = {
 			isa = PBXGroup;
 			children = (
+				6F052C9A1C9AB7D000AF8312 /* RegisterUrlTest.m */,
 				6FACA8FD1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m */,
 				6FACA8C41C916F92004F43F5 /* RippleTests.m */,
 				6FACA8C61C916F92004F43F5 /* Info.plist */,
@@ -187,6 +225,7 @@
 				6FACA8EB1C9182BA004F43F5 /* RegisteredApplicationCDTest.m */,
 				6FACA8FF1C91BBB7004F43F5 /* AppDelegateTest.m */,
 				6FACA9041C91CD9C004F43F5 /* UrlSchemeHandlertest.m */,
+				6F052C921C9AB1DD00AF8312 /* UrlFormatter.m */,
 			);
 			path = RippleTests;
 			sourceTree = "<group>";
@@ -329,16 +368,21 @@
 				6FACA8D61C9178B8004F43F5 /* RegisteredApplicationList.m in Sources */,
 				6F052C8D1C99659B00AF8312 /* CountdownViewController.m in Sources */,
 				6FACA8D31C917797004F43F5 /* RegisteredApplication.m in Sources */,
+				6F052C961C9AB2F700AF8312 /* DNLLRegisterUrl.m in Sources */,
 				6FACA8FA1C91934E004F43F5 /* RegisteredApplicationFactory.m in Sources */,
 				6FACA8F71C9189F0004F43F5 /* RegisteredApplicationListCD.m in Sources */,
+				6F052C901C9AAE1800AF8312 /* DNLLUrlFormatter.m in Sources */,
 				6FACA8B21C916F92004F43F5 /* ViewController.m in Sources */,
 				6FACA8AF1C916F92004F43F5 /* AppDelegate.m in Sources */,
 				6FACA8AC1C916F92004F43F5 /* main.m in Sources */,
 				6FACA8E41C917DAC004F43F5 /* CoreDataHandler.m in Sources */,
 				6FACA8F41C9187BE004F43F5 /* RegisteredApplicationEntity.m in Sources */,
+				6F052C9E1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m in Sources */,
+				6F052CA11C9ABE8A00AF8312 /* DNLLCompleteUrl.m in Sources */,
 				6FB1CF681C974079009652CF /* RegisteredAppTableViewController.m in Sources */,
 				6FACA8DE1C917BC8004F43F5 /* RegisteredApplicationCD.m in Sources */,
 				6FACA8E11C917BDD004F43F5 /* Ripple.xcdatamodeld in Sources */,
+				6F052C991C9AB3C800AF8312 /* DNLLFormatterFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +394,10 @@
 				6FACA8EC1C9182BA004F43F5 /* RegisteredApplicationCDTest.m in Sources */,
 				6FACA8D81C9179E0004F43F5 /* RegisteredApplicationTest.m in Sources */,
 				6FACA9001C91BBB7004F43F5 /* AppDelegateTest.m in Sources */,
+				6F052C9B1C9AB7D000AF8312 /* RegisterUrlTest.m in Sources */,
 				6FACA8FE1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m in Sources */,
 				6FACA8C51C916F92004F43F5 /* RippleTests.m in Sources */,
+				6F052C931C9AB1DD00AF8312 /* UrlFormatter.m in Sources */,
 				6FACA8FC1C91960C004F43F5 /* RegisteredApplicationListCDTest.m in Sources */,
 				6FACA9051C91CD9C004F43F5 /* UrlSchemeHandlertest.m in Sources */,
 			);

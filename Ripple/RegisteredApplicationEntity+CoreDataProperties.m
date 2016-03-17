@@ -2,7 +2,7 @@
 //  RegisteredApplicationEntity+CoreDataProperties.m
 //  Ripple
 //
-//  Created by Daniel Llewellyn on 10/03/2016.
+//  Created by Daniel Llewellyn on 17/03/2016.
 //  Copyright © 2016 Daniel Llewellyn. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,5 +15,6 @@
 
 @dynamic applicationName;
 @dynamic url;
+@dynamic applicationDescription;
 
 @end

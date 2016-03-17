@@ -15,6 +15,7 @@
 
 @property (nonatomic, setter=setUrl:) NSString *url;
 @property (nonatomic, setter=setAppName:) NSString *applicationName;
+@property (nonatomic, setter=setApplicationDescription:) NSString *applicationDescription;
 
 @end
 
@@ -22,6 +23,7 @@
 
 @synthesize url = _url;
 @synthesize applicationName = _applicationName;
+@synthesize applicationDescription = _applicationDescription;
 
 -(void) setAppName:(NSString * _Nonnull) applicationName {
     _underlyingObject.applicationName = applicationName;
@@ -34,15 +36,22 @@
     _url = url;
 }
 
+-(void) setApplicationDescription:(NSString * _Nonnull) applicationDescription {
+    _underlyingObject.applicationDescription = applicationDescription;
+    _applicationDescription = applicationDescription;
+}
+
 -(instancetype _Nonnull) initWithUnderlyingObject:(RegisteredApplicationEntity * _Nonnull) underlyingObject {
     self = [super init];
     _underlyingObject = underlyingObject;
     _url = underlyingObject.url;
     _applicationName = underlyingObject.applicationName;
+    _applicationDescription = underlyingObject.applicationDescription;
+    
     return self;
 }
 
--(instancetype _Nonnull) initWithUrl:(NSString* _Nonnull) url andApplicationName:(NSString* _Nonnull) applicationName {
+-(instancetype _Nonnull) initWithUrl:(NSString* _Nonnull) url andApplicationName:(NSString* _Nonnull) applicationName andAppDescription:(NSString * _Nonnull) applicationDescription {
     self = [super init];
     
     if (self == nil) {
@@ -57,6 +66,7 @@
     
     self.url = url;
     self.applicationName = applicationName;
+    self.applicationDescription = applicationDescription;
     
     return self;
 }

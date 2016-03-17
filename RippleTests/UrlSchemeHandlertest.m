@@ -31,7 +31,7 @@
     [super tearDown];
 }
 
-- (void)testUrlSchemeHandler {
+- (void) testUrlSchemeHandler {
     NSURL *url = [NSURL URLWithString:@RegisterURL];
     NSString *appName = @"Test app name";
     [handler handleWithUrl:url andApplicationName:appName];

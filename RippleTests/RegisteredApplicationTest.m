@@ -42,7 +42,7 @@
 }
 
 - (void)testRegisteredApplicationThrowsException {
-    XCTAssertThrows([[RegisteredApplication alloc] initWithUrl:@"url" andApplicationName:@"test"]);
+    XCTAssertThrows([[RegisteredApplication alloc] initWithUrl:@"url" andApplicationName:@"test" andAppDescription:@"Test desc"]);
 }
 
 - (void)testRegisteredApplicationThrowsExceptionOnSave {

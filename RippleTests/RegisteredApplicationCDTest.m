@@ -44,8 +44,9 @@
 - (void)testInsertingAWorkout {
     NSString *url = @"com.example.url";
     NSString *appName = @"Application name";
+    NSString *desc = @"appDesc";
     
-    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:appName];
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:appName andAppDescription:desc];
     [racd save];
 
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"applicationName == %@", appName];
@@ -70,10 +71,11 @@
 -(void) testThatWhenWeChangeAnApplicationNameItUpdatesInTheDatabase {
     NSString *url = @"com.example.url";
     NSString *appName = @"Application name";
+    NSString *appDesc = @"This+is+a+test+app+description";
     
     NSString *otherUrl = @"com.alternative.url";
     
-    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:appName];
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:url andApplicationName:appName andAppDescription:appDesc];
     [racd save];
     
     racd.url = otherUrl;
@@ -97,8 +99,9 @@
 
 -(void) testThatWecanDeleteAnObjectfromCd {
     NSString *appName = @"app name";
+    NSString *appDesc = @"This+is+a+test+app+description";
     
-    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:@"url"  andApplicationName:appName];
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrl:@"url"  andApplicationName:appName andAppDescription:appDesc];
     [racd save];
     
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"applicationName == %@", appName];
