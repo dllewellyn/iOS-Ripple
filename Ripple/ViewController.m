@@ -66,26 +66,47 @@
 }
 
 
+-(CGRect) loadSquare:(CGFloat) heightWidth {
+    CGFloat y = CGRectGetMaxY(self.view.frame);
+    CGFloat x = CGRectGetMaxX(self.view.frame);
+    
+    return CGRectMake(x / 2 - (heightWidth / 2),
+                      y - ((heightWidth / 2) + 150),
+                      heightWidth,
+                      heightWidth);
+}
+
+-(UIView *) createView:(CGRect) rect {
+   UIView *returnView = [[UIView alloc] initWithFrame:rect];
+    [returnView.layer setCornerRadius:rect.size.width / 2];
+    return returnView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self endTestMode];
     
     [self.btnTrigger addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [self.btnTrigger addTarget:self action:@selector(imageDropped:withEvent:) forControlEvents:UIControlEventTouchUpInside];
    
-    CGFloat y = CGRectGetMaxY(self.view.frame);
-    CGFloat x = CGRectGetMaxX(self.view.frame);
     
-    self.bottomRect = CGRectMake(x / 2 - 100, // Half way, then minus the width
-                                 y - 300,
-                                 200,
-                                 200);
+    UIView *vi1 = [self createView:[self loadSquare:100]];
+    /*#03a9f4*/
+    [vi1 setBackgroundColor:[UIColor colorWithRed:0.012 green:0.663 blue:0.957 alpha:1] ];
+    [self.view addSubview:vi1];
+    [self.view sendSubviewToBack:vi1];
+
     
-     self.innerView = [[UIView alloc] initWithFrame:self.bottomRect];
+    UIView *vi = [self createView:[self loadSquare:150]];
+     /*#2196f3*/
+    [vi setBackgroundColor:[UIColor colorWithRed:0.129 green:0.588 blue:0.953 alpha:1]];
+    [self.view addSubview:vi];
+    [self.view sendSubviewToBack:vi];
+    
+    self.bottomRect = [self loadSquare:200];
+    self.innerView = [self createView:self.bottomRect];
+
     [self.innerView setBackgroundColor:[UIColor blueColor]];
-    [self.innerView.layer setCornerRadius:100];
     
     [self.view addSubview:self.innerView];
     [self.view sendSubviewToBack:self.innerView];
