@@ -30,5 +30,9 @@
     XCTAssertThrows([[RegisteredApplicationList alloc] initFromDataSource]);
 }
 
+-(void) testThatIsObjectInListThrowsExceptionOnConstruct {
+    RegisteredApplicationList *list = [[RegisteredApplicationList alloc] init];
+    XCTAssertThrows([list isObjectInList:@"Test"]);
+}
 
 @end

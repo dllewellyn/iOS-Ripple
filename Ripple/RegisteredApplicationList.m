@@ -41,6 +41,12 @@ static RegisteredApplicationList *instance;
     return -1;
 }
 
+-(BOOL) isObjectInList:(NSString* _Nonnull) appName {
+    [[NSException exceptionWithName:@"Needs subclassing" reason:@"This class needs to be subclassed before use" userInfo:nil] raise];
+    return NO;
+}
+
+# pragma Delegate methods
 -(void) dataChangedAtIndex:(NSInteger) index {
     if (self.delegate != nil) {
         [self.delegate dataChangedAtIndex:index];
@@ -52,4 +58,6 @@ static RegisteredApplicationList *instance;
         [self.delegate dataAdded:addedAppliation];
     }
 }
+
+
 @end

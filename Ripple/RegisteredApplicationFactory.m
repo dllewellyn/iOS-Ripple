@@ -55,6 +55,7 @@ const NSInteger defaultType = CoreDataType;
 }
 
 +(RegisteredApplication* _Nullable) createApplicationDefaultType:(NSString * _Nonnull) applicationName andUrlScheme:(NSString * _Nonnull) url andApplicationDescription:(NSString * _Nonnull)applicationDescription {
+
     RegisteredApplication* app = [self createApplicationForType:defaultType andApplicationName:applicationName andUrlScheme:url andApplicationDescription:applicationDescription];
     [app save];
     return app;

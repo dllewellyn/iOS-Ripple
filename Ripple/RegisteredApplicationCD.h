@@ -17,6 +17,6 @@
  @param underlyingObject a RegisteredApplicationEntity object
  @return a RegisteredApplicationCD object
  */
--(instancetype _Nonnull) initWithUnderlyingObject:(RegisteredApplicationEntity * _Nonnull) underlyingObject;
+-(instancetype _Nullable) initWithUnderlyingObject:(RegisteredApplicationEntity * _Nonnull) underlyingObject;
 
 @end

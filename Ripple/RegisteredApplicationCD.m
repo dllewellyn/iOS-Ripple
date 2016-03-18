@@ -40,13 +40,16 @@
     _applicationDescription = applicationDescription;
 }
 
--(instancetype _Nonnull) initWithUnderlyingObject:(RegisteredApplicationEntity * _Nonnull) underlyingObject {
+-(instancetype _Nullable) initWithUnderlyingObject:(RegisteredApplicationEntity * _Nonnull) underlyingObject {
     self = [super init];
-    _underlyingObject = underlyingObject;
-    _url = underlyingObject.url;
-    _applicationName = underlyingObject.applicationName;
-    _applicationDescription = underlyingObject.applicationDescription;
     
+    if (self != nil)
+    {
+        _underlyingObject = underlyingObject;
+        _url = underlyingObject.url;
+        _applicationName = underlyingObject.applicationName;
+        _applicationDescription = underlyingObject.applicationDescription;
+    }
     return self;
 }
 
@@ -61,7 +64,7 @@
     
     // Make sure this happens first since the setter for url and app name rely on _underlyingObject being set
     _underlyingObject = [NSEntityDescription insertNewObjectForEntityForName:@ENTITY_NAME
-                                  inManagedObjectContext:handler.managedObjectContext];
+                                                      inManagedObjectContext:handler.managedObjectContext];
     
     self.urlScheme = urlScheme;
     self.applicationName = applicationName;
@@ -81,7 +84,7 @@
     [[_underlyingObject  managedObjectContext] save:&error];
     
     if (error != nil) {
-        #warning Handle this error
+#warning Handle this error
         NSLog(@"%@", error);
     }
 }

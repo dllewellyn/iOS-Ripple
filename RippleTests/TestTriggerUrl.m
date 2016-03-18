@@ -29,8 +29,17 @@
     NSString *scheme = @"scheme";
     NSString *appName = @"app.name.this";
     
-    NSURL *url = [[DNLLTriggerUrl alloc] initWith:appName andTriggerType:scheme].url;
+    NSURL *url = [[DNLLTriggerUrl alloc] initWith:appName andTriggerType:scheme andIsTest:NO].url;
     NSString *expected = [NSString stringWithFormat:@"%@://%@", scheme, appName];
+    XCTAssert([[url absoluteString] isEqualToString:expected]);
+}
+
+- (void)testTriggerUrlConstructorThatsATest {
+    NSString *scheme = @"scheme";
+    NSString *appName = @"app.name.this";
+    
+    NSURL *url = [[DNLLTriggerUrl alloc] initWith:appName andTriggerType:scheme andIsTest:YES].url;
+    NSString *expected = [NSString stringWithFormat:@"%@://%@.test", scheme, appName];
     XCTAssert([[url absoluteString] isEqualToString:expected]);
 }
 

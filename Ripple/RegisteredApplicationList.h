@@ -59,6 +59,14 @@
  */
 -(void) reload;
 
+/**
+ Is the object in the list
+ 
+ @param app the application name
+ @returns Y/ N if the object is in the list
+ */
+-(BOOL) isObjectInList:(NSString* _Nonnull) appName;
+
 // Delegate
 @property (weak) id<DataChanged> delegate;
 
