@@ -53,7 +53,7 @@
         [self performSegueWithIdentifier:@"ShowCountdown" sender:self];
     }
     
-    self.btnTrigger.layer.frame = CGRectMake(self.resetLocation.origin.x,
+    self.btnTrigger.layer.frame = CGRectMake(self.resetLocation.origin.x / 2,
                                              self.resetLocation.origin.y,
                                              self.resetLocation.size.height,
                                              self.resetLocation.size.width);
