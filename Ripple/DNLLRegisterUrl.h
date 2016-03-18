@@ -11,10 +11,24 @@
 
 @interface DNLLRegisterUrl : DNLLUrlFormatter
 
+/**
+ Init the class with values
+ 
+ @param applicationDescription description of the application
+ @param scheme scheme of the application
+ 
+ @returns instance of DNLL register URL
+ */
+-(instancetype _Nullable) initWithDescription:(NSString * _Nonnull) applicationDescription
+                                  andUrlScheme:(NSString * _Nonnull) scheme;
+
 // Response trigger
-@property NSString *responseName;
+@property NSString * _Nullable responseName;
 
 // Description of the application that we are registering
-@property NSString *appDescription;
+@property NSString * _Nullable appDescription;
+
+// Url 
+@property NSURL * _Nullable url;
 
 @end

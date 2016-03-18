@@ -13,7 +13,8 @@
 
 @interface RegisteredApplicationListCD()
 
-@property NSMutableArray *internalHolder;
+// Internal holder for the application list
+@property NSMutableArray<RegisteredApplication*> *internalHolder;
 
 @end
 
@@ -44,6 +45,21 @@
     }
     
     return self;
+}
+
+-(BOOL) isObjectInList:(NSString * _Nonnull) appName {
+    BOOL isFound = NO;
+    
+    for (RegisteredApplication *app in self.internalHolder)
+    {
+        if ([app.applicationName isEqualToString:appName])
+        {
+            isFound = YES;
+            break;
+        }
+    }
+    
+    return isFound;
 }
 
 -(RegisteredApplication*) objectAtIndex:(NSUInteger) index {

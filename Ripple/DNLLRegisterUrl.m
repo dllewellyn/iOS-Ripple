@@ -13,6 +13,9 @@
 // Seperator
 NSString *seperator = @"-";
 
+// Format for a register URL
+// <scheme>://<appname>#<returnscheme><seperator><description>
+NSString *registerUrlFormat = @"ripple://com.ripple.register#%@%@%@";
 
 -(instancetype _Nullable) initWithUrl:(NSURL * _Nonnull) url {
     self = [super init];
@@ -31,6 +34,7 @@ NSString *seperator = @"-";
                 {
                     self.responseName = [seperatedStrings objectAtIndex:0];
                     self.appDescription = [seperatedStrings objectAtIndex:1];
+                    self.url = url;
                 }
                 else
                 {
@@ -52,4 +56,17 @@ NSString *seperator = @"-";
     return self;
 }
 
+-(instancetype _Nullable) initWithDescription:(NSString *) applicationDescription andUrlScheme:(NSString *) scheme {
+    self = [super init];
+    
+    if (self != nil)
+    {
+        self.urlType = RegisterUrl;
+        NSString *urlString = [NSString stringWithFormat:registerUrlFormat, scheme, seperator, applicationDescription];
+        self.url = [NSURL URLWithString:urlString];
+        self.appDescription = applicationDescription;
+        self.responseName = scheme;
+    }
+    return self;
+}
 @end

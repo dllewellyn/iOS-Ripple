@@ -52,5 +52,19 @@
     // Forget the #
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"ripple://com.ripple.register#%@%@", resp, exampleString]];
     XCTAssertNil([[DNLLRegisterUrl alloc] initWithUrl:url]);
+    
+}
+
+-(void) testRegisteringUrlWithFields {
+    NSString *resp = @"response";
+    NSString *exampleString = [@"This is an example of a lovely string" urlEncode];
+    
+    DNLLRegisterUrl *url = [[DNLLRegisterUrl alloc] initWithDescription:exampleString andUrlScheme:resp];
+    XCTAssert([url.appDescription isEqualToString:exampleString]);
+    XCTAssert([url.responseName isEqualToString:resp]);
+    
+    NSString *expectedString = [NSString stringWithFormat:@"ripple://com.ripple.register#%@-%@", resp, exampleString];
+    XCTAssert([[url.url absoluteString] isEqualToString:expectedString]);
+        
 }
 @end

@@ -15,6 +15,11 @@
 
 @implementation URLSchemeHandler
 
+// Complete
+NSString *OpComplete = @"Operation complete";
+
+// Already stored
+NSString *AlreadyStored = @"Application already stored in the list";
 
 -(UIAlertController*) retrieveResponseToAdding:(BOOL) wasSuccess
 {
@@ -29,9 +34,8 @@
     return controller;
 }
 
--(UIAlertController*) retrieveResponseToCompletion
+-(UIAlertController*) retrieveResponseToCompletion:(NSString* ) message
 {
-    NSString *message = @"Operation complete";
     UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"Done"
                                                                         message:message
                                                                  preferredStyle:UIAlertControllerStyleAlert];
@@ -42,6 +46,8 @@
     return controller;
 }
 
+
+
 -(UIAlertController* _Nullable) handleWithUrl:(NSURL* _Nonnull) url andApplicationName:(NSString * _Nonnull) applicationName
 {
     
@@ -51,7 +57,7 @@
     
     if (formatter == nil)
     {
-       [NSException exceptionWithName:@"Invalid url" reason:@"URL is not valid" userInfo:nil];
+        [[NSException exceptionWithName:@"Invalid url" reason:@"URL is not valid" userInfo:nil] raise];
     }
     
     switch (formatter.urlType)
@@ -59,31 +65,39 @@
         case CompleteUrl:
             if (![Trigger trigger:applicationName andIsTest:NO])
             {
-                returnController = [self retrieveResponseToCompletion];
+                returnController = [self retrieveResponseToCompletion:OpComplete];
             }
             break;
             
         case RegisterUrl:
         {
-            DNLLRegisterUrl *regUrl =  (DNLLRegisterUrl *) formatter;
             
-            // Register url
-            RegisteredApplication *app = [RegisteredApplicationFactory createApplicationDefaultType:applicationName andUrlScheme:regUrl.responseName
-                                                andApplicationDescription:regUrl.appDescription];
-            if (app != nil)
+            RegisteredApplicationList *list = [RegisteredApplicationFactory getDefaultApplicationList];
+            if (![list isObjectInList:applicationName])
             {
-                returnController = [self retrieveResponseToAdding:YES];
+                DNLLRegisterUrl *regUrl =  (DNLLRegisterUrl *) formatter;
+                
+                // Register url
+                RegisteredApplication *app = [RegisteredApplicationFactory createApplicationDefaultType:applicationName andUrlScheme:regUrl.responseName
+                                                                              andApplicationDescription:regUrl.appDescription];
+                if (app != nil)
+                {
+                    returnController = [self retrieveResponseToAdding:YES];
+                }
+                else
+                {
+                    returnController = [self retrieveResponseToAdding:NO];
+                }
             }
             else
             {
-                returnController = [self retrieveResponseToAdding:NO];
+                returnController = [self retrieveResponseToCompletion:AlreadyStored];
             }
             
             break;
         }
-           
+            
         default:
-            [NSException exceptionWithName:@"Invalid url" reason:@"URL is not valid" userInfo:nil];
             break;
     };
     

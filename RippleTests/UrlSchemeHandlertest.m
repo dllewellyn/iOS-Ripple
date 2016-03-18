@@ -12,6 +12,7 @@
 #import "RegisteredApplication.h"
 #import "RegisteredApplicationCD.h"
 #import "CoreDataHandler.h"
+#import "DNLLRegisterUrl.h"
 
 @interface UrlSchemeHandlertest : XCTestCase {
     URLSchemeHandler *handler;
@@ -32,9 +33,10 @@
 }
 
 - (void) testUrlSchemeHandler {
-    NSURL *url = [NSURL URLWithString:@RegisterURL];
     NSString *appName = @"Test app name";
-    [handler handleWithUrl:url andApplicationName:appName];
+    
+    DNLLRegisterUrl *url = [[DNLLRegisterUrl alloc] initWithDescription:@"description" andUrlScheme:@"testscheme"];
+    [handler handleWithUrl:url.url andApplicationName:appName];
     
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"applicationName == %@", appName];
@@ -50,6 +52,11 @@
     RegisteredApplicationEntity *app = [retArr objectAtIndex:0];
     XCTAssert([app.applicationName isEqualToString:appName]);
     [[app managedObjectContext] deleteObject:app];
+}
+
+-(void) testInvalidUrlScheme {
+    NSURL *url = [NSURL URLWithString:@"ripple://com.ripple.invalid"];
+    XCTAssertThrows([handler handleWithUrl:url andApplicationName:@"Testname"]);
 }
 
 @end

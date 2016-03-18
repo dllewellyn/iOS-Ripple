@@ -41,6 +41,28 @@
     [super tearDown];
 }
 
+-(void) testThatIsObjectInListWorks {
+    NSString *url = @"com.example.url";
+    NSString *appName = @"Application name";
+    NSString *appDesc = @"Application description";
+    
+    NSString *url2 = @"com.example.url2";
+    NSString *appName2 = @"Application name2";
+    
+    RegisteredApplication *racd = [[RegisteredApplicationCD alloc] initWithUrlScheme:url andApplicationName:appName andAppDescription:appDesc];
+    [racd save];
+    
+    RegisteredApplication *racd1 = [[RegisteredApplicationCD alloc] initWithUrlScheme:url2 andApplicationName:appName2 andAppDescription:appDesc];
+    [racd1 save];
+    
+    RegisteredApplicationListCD *list = [[RegisteredApplicationListCD alloc] initFromDataSource];
+    
+    XCTAssertFalse([list isObjectInList:@"TestApp"]);
+    XCTAssertTrue([list isObjectInList:appName2]);
+    XCTAssertTrue([list isObjectInList:appName]);
+    
+}
+
 - (void)testThatTheListGetsAllRegisteredApplications {
     
     
