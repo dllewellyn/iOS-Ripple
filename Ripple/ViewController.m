@@ -52,6 +52,11 @@
     {
         [self performSegueWithIdentifier:@"ShowCountdown" sender:self];
     }
+    else
+    {
+        [self.lblRelease setHidden:NO];
+        [self.lblSwipeDown setHidden:YES];
+    }
     
     self.btnTrigger.layer.frame = CGRectMake(self.resetLocation.origin.x / 2,
                                              self.resetLocation.origin.y,
