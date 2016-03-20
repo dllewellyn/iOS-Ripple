@@ -32,4 +32,18 @@ NSString *testTriggerFormat = @"%@://%@.test";
     
     return self;
 }
+
+-(instancetype _Nullable) initWithUrl:(NSURL *)url {
+    self = [super init];
+    
+    if (self != nil) {
+        self.url = url;
+        
+        self.applicationName = [self.url host];
+        self.scheme = [self.url scheme];
+        
+    }
+    return self;
+}
+
 @end

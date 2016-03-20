@@ -43,4 +43,17 @@
     XCTAssert([[url absoluteString] isEqualToString:expected]);
 }
 
+-(void) testTriggerUrlConstructorWithUrl {
+    NSString * scheme = @"scheme";
+    NSString * urlPath = @"com.test.blah";
+    NSString *fmt = @"%@://%@";
+    
+    NSString *expected = [NSString stringWithFormat:fmt, scheme, urlPath];
+    NSURL *url = [NSURL URLWithString:expected];
+    DNLLTriggerUrl *trigger = [[DNLLTriggerUrl alloc] initWithUrl:url];
+    XCTAssert([trigger.applicationName isEqualToString:urlPath]);
+    XCTAssert([trigger.scheme isEqualToString:scheme]);
+    
+}
+
 @end

@@ -28,7 +28,5 @@
 // Description of the application that we are registering
 @property NSString * _Nullable appDescription;
 
-// Url 
-@property NSURL * _Nullable url;
 
 @end

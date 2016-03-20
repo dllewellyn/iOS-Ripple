@@ -22,4 +22,10 @@
 -(instancetype _Nullable) initWith:(NSString* _Nonnull) applicationName andTriggerType:(NSString* _Nonnull) triggerScheme andIsTest:(BOOL) isTest;
 
 
+// Application name
+@property NSString * _Nullable applicationName;
+
+// Scheme
+@property NSString * _Nullable scheme;
+
 @end
