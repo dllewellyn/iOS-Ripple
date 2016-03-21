@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import "URLSchemeHandler.h"
 #import "CoreDataHandler.h"
+
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import <TwitterKit/TwitterKit.h>
+
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +23,12 @@
 
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
+    [Fabric with:@[[Crashlytics class], [Twitter class], [Answers class]]];
+
+    NSString *string = [[NSBundle mainBundle] pathForResource:@"secrets" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:string];
+    [TwitterKit startWithConsumerKey:dict[@"consumer_key"] consumerSecret:dict[@"consumer_secret"]];
+
     [CoreDataHandler sharedInstance]; //Setup core data early
     return YES;
 }

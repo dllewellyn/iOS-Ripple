@@ -16,6 +16,12 @@
 		6F052C9B1C9AB7D000AF8312 /* RegisterUrlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C9A1C9AB7D000AF8312 /* RegisterUrlTest.m */; };
 		6F052C9E1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C9D1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m */; };
 		6F052CA11C9ABE8A00AF8312 /* DNLLCompleteUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */; };
+		6F48ABA71CA002D700189F2E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA51CA002D700189F2E /* Fabric.framework */; };
+		6F48ABA81CA002D700189F2E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA61CA002D700189F2E /* Crashlytics.framework */; };
+		6F48ABAC1CA008E700189F2E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA91CA008E600189F2E /* TwitterKit.framework */; };
+		6F48ABAD1CA008E700189F2E /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F48ABAA1CA008E700189F2E /* TwitterKitResources.bundle */; };
+		6F48ABAE1CA008E700189F2E /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABAB1CA008E700189F2E /* TwitterCore.framework */; };
+		6F48ABB01CA00AFD00189F2E /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F48ABAF1CA00AFD00189F2E /* secrets.plist */; };
 		6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F70921C980E3C0010CA9B /* Trigger.m */; };
 		6F9F14991C9EF44D005C13FB /* ExtraRespondersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F14981C9EF44D005C13FB /* ExtraRespondersTableViewController.m */; };
 		6FACA8AC1C916F92004F43F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AB1C916F92004F43F5 /* main.m */; };
@@ -75,6 +81,12 @@
 		6F052C9D1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringUrlEncode.m"; sourceTree = "<group>"; };
 		6F052C9F1C9ABE8A00AF8312 /* DNLLCompleteUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLCompleteUrl.h; sourceTree = "<group>"; };
 		6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLCompleteUrl.m; sourceTree = "<group>"; };
+		6F48ABA51CA002D700189F2E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		6F48ABA61CA002D700189F2E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		6F48ABA91CA008E600189F2E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		6F48ABAA1CA008E700189F2E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
+		6F48ABAB1CA008E700189F2E /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		6F48ABAF1CA00AFD00189F2E /* secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
 		6F7F70911C980E3C0010CA9B /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
 		6F7F70921C980E3C0010CA9B /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
 		6F9F14971C9EF44D005C13FB /* ExtraRespondersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtraRespondersTableViewController.h; path = ../ExtraRespondersTableViewController.h; sourceTree = "<group>"; };
@@ -132,6 +144,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F48ABA81CA002D700189F2E /* Crashlytics.framework in Frameworks */,
+				6F48ABAE1CA008E700189F2E /* TwitterCore.framework in Frameworks */,
+				6F48ABA71CA002D700189F2E /* Fabric.framework in Frameworks */,
+				6F48ABAC1CA008E700189F2E /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +216,11 @@
 		6FACA8A91C916F92004F43F5 /* Ripple */ = {
 			isa = PBXGroup;
 			children = (
+				6F48ABA91CA008E600189F2E /* TwitterKit.framework */,
+				6F48ABAA1CA008E700189F2E /* TwitterKitResources.bundle */,
+				6F48ABAB1CA008E700189F2E /* TwitterCore.framework */,
+				6F48ABA51CA002D700189F2E /* Fabric.framework */,
+				6F48ABA61CA002D700189F2E /* Crashlytics.framework */,
 				6F052C881C99651C00AF8312 /* ViewControllers */,
 				6FACA8DB1C917B4C004F43F5 /* CoreDataImpl */,
 				6FACA8CF1C91748B004F43F5 /* RegisteredApp */,
@@ -224,6 +245,7 @@
 			children = (
 				6F052C861C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png */,
 				6FACA8AB1C916F92004F43F5 /* main.m */,
+				6F48ABAF1CA00AFD00189F2E /* secrets.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -290,6 +312,7 @@
 				6FACA8A31C916F92004F43F5 /* Sources */,
 				6FACA8A41C916F92004F43F5 /* Frameworks */,
 				6FACA8A51C916F92004F43F5 /* Resources */,
+				6F9F149F1C9FFF79005C13FB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -362,8 +385,10 @@
 			files = (
 				6FACA8BA1C916F92004F43F5 /* LaunchScreen.storyboard in Resources */,
 				6F052C871C995BCE00AF8312 /* ic_ripple_trigger_no_shadow.png in Resources */,
+				6F48ABB01CA00AFD00189F2E /* secrets.plist in Resources */,
 				6FACA8B71C916F92004F43F5 /* Assets.xcassets in Resources */,
 				6FACA8B51C916F92004F43F5 /* Main.storyboard in Resources */,
+				6F48ABAD1CA008E700189F2E /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +400,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F9F149F1C9FFF79005C13FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 8f4824790b39aec1dfededfce1ae24725f1dfd5e ecd5c90185aaf11c6bb0ca30cf122555cf3a48f64610d37e3bd2245845bf0f34";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FACA8A31C916F92004F43F5 /* Sources */ = {
@@ -541,6 +582,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ripple",
+				);
 				INFOPLIST_FILE = Ripple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnll.Ripple;
@@ -552,6 +597,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ripple",
+				);
 				INFOPLIST_FILE = Ripple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnll.Ripple;
