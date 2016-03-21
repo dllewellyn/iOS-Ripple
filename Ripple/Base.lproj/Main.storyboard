@@ -200,11 +200,41 @@
                     <connections>
                         <segue destination="tmN-Mg-SR9" kind="relationship" relationship="viewControllers" id="Z1j-Z8-8Qd"/>
                         <segue destination="qkt-b5-lEM" kind="relationship" relationship="viewControllers" id="5MP-2S-FBL"/>
+                        <segue destination="NVK-Kg-Fmh" kind="relationship" relationship="viewControllers" id="Bzd-D8-4eI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsU-di-83Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-221" y="-111"/>
+        </scene>
+        <!--Add responders-->
+        <scene sceneID="aqX-x9-Qmg">
+            <objects>
+                <tableViewController id="NVK-Kg-Fmh" customClass="ExtraRespondersTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CBc-JQ-cTn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X7M-Kh-viY">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X7M-Kh-viY" id="uqq-0h-wvO">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NVK-Kg-Fmh" id="Pyf-5w-Bs7"/>
+                            <outlet property="delegate" destination="NVK-Kg-Fmh" id="4sv-Vh-715"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Add responders" image="InAppResponders" id="Czl-OH-qFw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPe-O8-9aq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221" y="621"/>
         </scene>
         <!--Responders-->
         <scene sceneID="yBb-QL-fV3">
@@ -228,6 +258,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="InAppResponders" width="25" height="25"/>
         <image name="ResponderImage" width="25" height="25"/>
         <image name="TriggerImage" width="25" height="25"/>
         <image name="ic_ripple_trigger_no_shadow.png" width="417" height="417"/>

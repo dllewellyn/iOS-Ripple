@@ -17,6 +17,7 @@
 		6F052C9E1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052C9D1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m */; };
 		6F052CA11C9ABE8A00AF8312 /* DNLLCompleteUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */; };
 		6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F70921C980E3C0010CA9B /* Trigger.m */; };
+		6F9F14991C9EF44D005C13FB /* ExtraRespondersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F14981C9EF44D005C13FB /* ExtraRespondersTableViewController.m */; };
 		6FACA8AC1C916F92004F43F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AB1C916F92004F43F5 /* main.m */; };
 		6FACA8AF1C916F92004F43F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AE1C916F92004F43F5 /* AppDelegate.m */; };
 		6FACA8B21C916F92004F43F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8B11C916F92004F43F5 /* ViewController.m */; };
@@ -76,6 +77,8 @@
 		6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLCompleteUrl.m; sourceTree = "<group>"; };
 		6F7F70911C980E3C0010CA9B /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
 		6F7F70921C980E3C0010CA9B /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
+		6F9F14971C9EF44D005C13FB /* ExtraRespondersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtraRespondersTableViewController.h; path = ../ExtraRespondersTableViewController.h; sourceTree = "<group>"; };
+		6F9F14981C9EF44D005C13FB /* ExtraRespondersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExtraRespondersTableViewController.m; path = ../ExtraRespondersTableViewController.m; sourceTree = "<group>"; };
 		6FACA8A71C916F92004F43F5 /* Ripple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FACA8AB1C916F92004F43F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FACA8AD1C916F92004F43F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 		6F052C881C99651C00AF8312 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6F9F14971C9EF44D005C13FB /* ExtraRespondersTableViewController.h */,
+				6F9F14981C9EF44D005C13FB /* ExtraRespondersTableViewController.m */,
 				6F052C8B1C99659B00AF8312 /* CountdownViewController.h */,
 				6F052C8C1C99659B00AF8312 /* CountdownViewController.m */,
 				6FACA8B01C916F92004F43F5 /* ViewController.h */,
@@ -392,6 +397,7 @@
 				6FACA8AC1C916F92004F43F5 /* main.m in Sources */,
 				6FACA8E41C917DAC004F43F5 /* CoreDataHandler.m in Sources */,
 				6FACA8F41C9187BE004F43F5 /* RegisteredApplicationEntity.m in Sources */,
+				6F9F14991C9EF44D005C13FB /* ExtraRespondersTableViewController.m in Sources */,
 				6F052C9E1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m in Sources */,
 				6F052CA11C9ABE8A00AF8312 /* DNLLCompleteUrl.m in Sources */,
 				6FB1CF681C974079009652CF /* RegisteredAppTableViewController.m in Sources */,
