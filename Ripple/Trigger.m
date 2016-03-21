@@ -66,8 +66,8 @@
     [[Twitter sharedInstance]logInWithCompletion:^(TWTRSession *session, NSError *error) {
         //Session details can be obtained here
         //Get an instance of the TWTRAPIClient from the Twitter shared instance. (This is created using the credentials which was used to initialize twitter, the first time)
-        TWTRAPIClient *client = [[Twitter sharedInstance]APIClient];
-        
+        TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:session.userID];
+
         //Build the request that you want to launch using the API and the text to be tweeted.
         NSURLRequest *tweetRequest = [client URLRequestWithMethod:@"POST" URL:@"https://api.twitter.com/1.1/statuses/update.json" parameters:[NSDictionary dictionaryWithObjectsAndKeys:@"TEXT TO BE TWEETED", @"status", nil] error:&error];
         

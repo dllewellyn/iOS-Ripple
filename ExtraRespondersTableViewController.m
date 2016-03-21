@@ -7,6 +7,8 @@
 //
 
 #import "ExtraRespondersTableViewController.h"
+#import "ExtraResponderTableViewCell.h"
+
 
 @interface ExtraRespondersTableViewController ()
 
@@ -41,15 +43,24 @@
     return 0;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [ExtraResponderTableViewCell getHeight];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSString *reuseId = @"ExtraCell";
     
-    // Configure the cell...
+    ExtraResponderTableViewCell *cell = (ExtraResponderTableViewCell*)[tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+    
+    if (cell == nil)
+    {
+        [self.tableView registerNib:[UINib nibWithNibName:@"ExtraResponderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseId];
+        cell = (ExtraResponderTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:reuseId];
+    }
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

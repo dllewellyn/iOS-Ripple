@@ -22,6 +22,13 @@
 		6F48ABAD1CA008E700189F2E /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F48ABAA1CA008E700189F2E /* TwitterKitResources.bundle */; };
 		6F48ABAE1CA008E700189F2E /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABAB1CA008E700189F2E /* TwitterCore.framework */; };
 		6F48ABB01CA00AFD00189F2E /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F48ABAF1CA00AFD00189F2E /* secrets.plist */; };
+		6F48ABB51CA0406D00189F2E /* ExtraResponderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F48ABB31CA0406D00189F2E /* ExtraResponderTableViewCell.m */; };
+		6F48ABB61CA0406D00189F2E /* ExtraResponderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F48ABB41CA0406D00189F2E /* ExtraResponderTableViewCell.xib */; };
+		6F48ABB91CA0461000189F2E /* InternalResponders.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F48ABB81CA0461000189F2E /* InternalResponders.m */; };
+		6F48ABBD1CA0462400189F2E /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F48ABBC1CA0462400189F2E /* Responder.m */; };
+		6F48ABC01CA046B800189F2E /* ResponderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F48ABBF1CA046B800189F2E /* ResponderFactory.m */; };
+		6F48ABC21CA047F300189F2E /* RespondersListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F48ABC11CA047F300189F2E /* RespondersListTest.m */; };
+		6F48ABC41CA0497100189F2E /* ResponderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F48ABC31CA0497100189F2E /* ResponderTest.m */; };
 		6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F70921C980E3C0010CA9B /* Trigger.m */; };
 		6F9F14991C9EF44D005C13FB /* ExtraRespondersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F14981C9EF44D005C13FB /* ExtraRespondersTableViewController.m */; };
 		6FACA8AC1C916F92004F43F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA8AB1C916F92004F43F5 /* main.m */; };
@@ -87,6 +94,17 @@
 		6F48ABAA1CA008E700189F2E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
 		6F48ABAB1CA008E700189F2E /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		6F48ABAF1CA00AFD00189F2E /* secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
+		6F48ABB21CA0406D00189F2E /* ExtraResponderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtraResponderTableViewCell.h; sourceTree = "<group>"; };
+		6F48ABB31CA0406D00189F2E /* ExtraResponderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtraResponderTableViewCell.m; sourceTree = "<group>"; };
+		6F48ABB41CA0406D00189F2E /* ExtraResponderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtraResponderTableViewCell.xib; sourceTree = "<group>"; };
+		6F48ABB71CA0461000189F2E /* InternalResponders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalResponders.h; sourceTree = "<group>"; };
+		6F48ABB81CA0461000189F2E /* InternalResponders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalResponders.m; sourceTree = "<group>"; };
+		6F48ABBB1CA0462400189F2E /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
+		6F48ABBC1CA0462400189F2E /* Responder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Responder.m; sourceTree = "<group>"; };
+		6F48ABBE1CA046B800189F2E /* ResponderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderFactory.h; sourceTree = "<group>"; };
+		6F48ABBF1CA046B800189F2E /* ResponderFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderFactory.m; sourceTree = "<group>"; };
+		6F48ABC11CA047F300189F2E /* RespondersListTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondersListTest.m; sourceTree = "<group>"; };
+		6F48ABC31CA0497100189F2E /* ResponderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderTest.m; sourceTree = "<group>"; };
 		6F7F70911C980E3C0010CA9B /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
 		6F7F70921C980E3C0010CA9B /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
 		6F9F14971C9EF44D005C13FB /* ExtraRespondersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtraRespondersTableViewController.h; path = ../ExtraRespondersTableViewController.h; sourceTree = "<group>"; };
@@ -164,6 +182,7 @@
 		6F052C881C99651C00AF8312 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6F48ABB11CA0402A00189F2E /* Cells */,
 				6F9F14971C9EF44D005C13FB /* ExtraRespondersTableViewController.h */,
 				6F9F14981C9EF44D005C13FB /* ExtraRespondersTableViewController.m */,
 				6F052C8B1C99659B00AF8312 /* CountdownViewController.h */,
@@ -193,6 +212,29 @@
 				6FCC1F361C9AE2090014A43B /* DNLLTriggerUrl.m */,
 			);
 			name = Formatter;
+			sourceTree = "<group>";
+		};
+		6F48ABB11CA0402A00189F2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6F48ABB21CA0406D00189F2E /* ExtraResponderTableViewCell.h */,
+				6F48ABB31CA0406D00189F2E /* ExtraResponderTableViewCell.m */,
+				6F48ABB41CA0406D00189F2E /* ExtraResponderTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		6F48ABBA1CA0461600189F2E /* Responders */ = {
+			isa = PBXGroup;
+			children = (
+				6F48ABB71CA0461000189F2E /* InternalResponders.h */,
+				6F48ABB81CA0461000189F2E /* InternalResponders.m */,
+				6F48ABBB1CA0462400189F2E /* Responder.h */,
+				6F48ABBC1CA0462400189F2E /* Responder.m */,
+				6F48ABBE1CA046B800189F2E /* ResponderFactory.h */,
+				6F48ABBF1CA046B800189F2E /* ResponderFactory.m */,
+			);
+			name = Responders;
 			sourceTree = "<group>";
 		};
 		6FACA89E1C916F92004F43F5 = {
@@ -236,6 +278,7 @@
 				6FACA9011C91C31E004F43F5 /* URLSchemeHandler.h */,
 				6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */,
 				6F052C911C9AAE1D00AF8312 /* Formatter */,
+				6F48ABBA1CA0461600189F2E /* Responders */,
 			);
 			path = Ripple;
 			sourceTree = "<group>";
@@ -267,6 +310,8 @@
 				6FCC1F311C9ADBA90014A43B /* DNLLCompletionUrlTest.m */,
 				6FCC1F331C9ADC440014A43B /* FormatterFactoryTest.m */,
 				6FCC1F381C9AE3EE0014A43B /* TestTriggerUrl.m */,
+				6F48ABC11CA047F300189F2E /* RespondersListTest.m */,
+				6F48ABC31CA0497100189F2E /* ResponderTest.m */,
 			);
 			path = RippleTests;
 			sourceTree = "<group>";
@@ -389,6 +434,7 @@
 				6FACA8B71C916F92004F43F5 /* Assets.xcassets in Resources */,
 				6FACA8B51C916F92004F43F5 /* Main.storyboard in Resources */,
 				6F48ABAD1CA008E700189F2E /* TwitterKitResources.bundle in Resources */,
+				6F48ABB61CA0406D00189F2E /* ExtraResponderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +468,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F48ABBD1CA0462400189F2E /* Responder.m in Sources */,
+				6F48ABB91CA0461000189F2E /* InternalResponders.m in Sources */,
 				6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */,
 				6FACA9031C91C31E004F43F5 /* URLSchemeHandler.m in Sources */,
 				6FACA8F31C9187BE004F43F5 /* RegisteredApplicationEntity+CoreDataProperties.m in Sources */,
@@ -439,6 +487,8 @@
 				6FACA8E41C917DAC004F43F5 /* CoreDataHandler.m in Sources */,
 				6FACA8F41C9187BE004F43F5 /* RegisteredApplicationEntity.m in Sources */,
 				6F9F14991C9EF44D005C13FB /* ExtraRespondersTableViewController.m in Sources */,
+				6F48ABC01CA046B800189F2E /* ResponderFactory.m in Sources */,
+				6F48ABB51CA0406D00189F2E /* ExtraResponderTableViewCell.m in Sources */,
 				6F052C9E1C9ABB6A00AF8312 /* NSString+NSStringUrlEncode.m in Sources */,
 				6F052CA11C9ABE8A00AF8312 /* DNLLCompleteUrl.m in Sources */,
 				6FB1CF681C974079009652CF /* RegisteredAppTableViewController.m in Sources */,
@@ -456,12 +506,14 @@
 				6FCC1F391C9AE3EE0014A43B /* TestTriggerUrl.m in Sources */,
 				6FCC1F341C9ADC440014A43B /* FormatterFactoryTest.m in Sources */,
 				6FACA8DA1C917ADD004F43F5 /* RegisteredApplicationListTest.m in Sources */,
+				6F48ABC21CA047F300189F2E /* RespondersListTest.m in Sources */,
 				6FACA8EC1C9182BA004F43F5 /* RegisteredApplicationCDTest.m in Sources */,
 				6FACA8D81C9179E0004F43F5 /* RegisteredApplicationTest.m in Sources */,
 				6FACA9001C91BBB7004F43F5 /* AppDelegateTest.m in Sources */,
 				6F052C9B1C9AB7D000AF8312 /* RegisterUrlTest.m in Sources */,
 				6FACA8FE1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m in Sources */,
 				6FACA8C51C916F92004F43F5 /* RippleTests.m in Sources */,
+				6F48ABC41CA0497100189F2E /* ResponderTest.m in Sources */,
 				6F052C931C9AB1DD00AF8312 /* UrlFormatter.m in Sources */,
 				6FACA8FC1C91960C004F43F5 /* RegisteredApplicationListCDTest.m in Sources */,
 				6FACA9051C91CD9C004F43F5 /* UrlSchemeHandlertest.m in Sources */,
