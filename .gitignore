@@ -5,7 +5,7 @@
 ## Build generated
 build/
 DerivedData
-secrets.plist
+*/secrets.plist
 ## Various settings
 *.pbxuser
 !default.pbxuser
