@@ -23,11 +23,16 @@ static ResponderFactory *instance;
         instance = [[ResponderFactory alloc] init];
         
         NSMutableArray *responders = [[NSMutableArray alloc] init];
+        [responders addObject:[self getTwitterResponder]];
+        instance.respondersList = [[InternalResponders alloc] initFromFile];
     }
     
     return instance;
 }
 
-
++(Responder *) getTwitterResponder {
+    Responder *responder = [[Responder alloc] initWithName:@"Twitter" andDescription:@"Send a panic tweet when you trigger the button" andViewController:nil andShareString:@"Help! I've hit the panic button!" andShareLocation:YES andIsEnabled:YES];
+    return responder;
+}
 
 @end

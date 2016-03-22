@@ -30,7 +30,7 @@
     NSString * testDescription = @"Test description";
     UIViewController *ctrl = [[UIViewController alloc] init];
     
-    Responder *responder = [[Responder alloc] initWithName:testName andDescription:testDescription andViewController:ctrl];
+    Responder *responder = [[Responder alloc] initWithName:testName andDescription:testDescription andViewController:ctrl andShareString:@"" andShareLocation:YES andIsEnabled:NO];
     
     XCTAssert([responder.name isEqualToString:testName]);
     XCTAssert([responder.responderDescription isEqualToString:testDescription]);

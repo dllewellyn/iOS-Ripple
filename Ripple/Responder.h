@@ -18,7 +18,13 @@
  @param viewController can be nil (to use default controller) or specify a VC that can be 
  used to configure this property
  */
--(instancetype _Nullable) initWithName:(NSString * _Nonnull) name andDescription:(NSString * _Nonnull) description andViewController:(UIViewController * _Nullable) viewController;
+-(instancetype _Nullable) initWithName:(NSString * _Nonnull) name andDescription:(NSString * _Nonnull) description andViewController:(UIViewController * _Nullable) viewController andShareString:(NSString * _Nonnull) shareString andShareLocation:(BOOL) shouldSharelocation andIsEnabled:(BOOL) isEnabled;
+
+// Share text
+@property NSString * _Nullable shareString;
+
+// Should this type of responder share location
+@property BOOL shareLocation;
 
 // Name of the responder
 @property NSString * _Nullable name;

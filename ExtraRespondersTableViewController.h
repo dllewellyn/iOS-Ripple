@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExtraResponderTableViewCell.h"
 
-@interface ExtraRespondersTableViewController : UITableViewController
+@interface ExtraRespondersTableViewController : UITableViewController<ResponderChange>
 
 @end

@@ -15,6 +15,7 @@
 +(instancetype _Nullable) sharedInstance;
 
 // Internal responders list
-@property (readonly) InternalResponders *respondersList;
+@property (readonly) InternalResponders * _Nullable respondersList;
+
 
 @end

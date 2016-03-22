@@ -19,9 +19,25 @@
  
  @returns InternalResponders instance
  */
--(instancetype _Nullable) initWithResponder:(NSArray<Responder*>*) responders;
+-(instancetype _Nullable) initWithResponder:(NSArray<Responder* > * _Nonnull) responders;
+
+/**
+ Init from file
+
+ @returns an instance of internal responders
+ */
+-(instancetype _Nullable) initFromFile;
 
 // A list of internal responders
-@property (readonly) NSArray<Responder*> *responders;
+@property (readonly) NSArray<Responder* >  * _Nonnull responders;
+
+// Save this to file
+-(BOOL) saveToFile;
+
+// Delete
+-(BOOL) deleteSaved;
+
+// Does the save file exist 
+-(BOOL) doesSaveDetailsExist;
 
 @end

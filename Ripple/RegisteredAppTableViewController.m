@@ -58,6 +58,7 @@
     RegisteredApplication *app = [self.list objectAtIndex:indexPath.row];
     [cell.textLabel setText:app.applicationName];
     [cell.detailTextLabel setText:app.applicationDescription];
+    
     return cell;
 }
 
