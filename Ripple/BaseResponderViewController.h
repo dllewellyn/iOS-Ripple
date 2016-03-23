@@ -10,6 +10,9 @@
 #import "Responder.h"
 #import "InternalResponders.h"
 
+/* Base view controller. For ease, this is the VC that will handle
+ setting up a responder and it's probably going to be easiest to subclass
+ this to make a new responder. */
 @interface BaseResponderViewController : UIViewController
 
 // Display the title

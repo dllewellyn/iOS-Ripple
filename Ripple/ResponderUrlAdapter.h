@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DNLLUrlFormatter.h"
+#import "DNLLRegisterUrl.h"
 #import "Responder.h"
 
 @interface ResponderUrlAdapter : NSObject
 
 /**
- Get a URL formatter for a given responder.
+ Get a URL formatter for a given responder. This can be used to register
+ the application
  
  @param responder the responder to get the formatter for
 
  @returns formatter object.
  */
-+(DNLLUrlFormatter *) formatterForResponder:(Responder*) responder;
++(DNLLRegisterUrl * _Nullable) registerUrlForResponder:(Responder* _Nonnull) responder;
+
 @end

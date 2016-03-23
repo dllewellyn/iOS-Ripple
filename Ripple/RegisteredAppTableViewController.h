@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RegisteredApplicationList.h"
 
+/** This is a list of all of the registered apps that will respond to a panic button */
 @interface RegisteredAppTableViewController : UITableViewController<DataChanged>
 
 @end

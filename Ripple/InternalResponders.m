@@ -131,7 +131,7 @@ const NSString *shareLocation = @"share_location";
     
     if (error != nil)
     {
-#warning handle error
+        #warning handle error
     }
     
     return deleted;

@@ -10,4 +10,9 @@
 
 @implementation ResponderUrlAdapter
 
++(DNLLRegisterUrl * _Nullable) registerUrlForResponder:(Responder* _Nonnull) responder {
+    DNLLRegisterUrl *registerUrl = [[DNLLRegisterUrl alloc] initWithDescription:responder.responderDescription andUrlScheme:responder.name];
+    return registerUrl;
+}
+
 @end

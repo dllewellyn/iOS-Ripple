@@ -10,11 +10,14 @@
 #import <CoreData/CoreData.h>
 #import "RegisteredApplicationEntity.h"
 
+/* Implementation of the registered application, with core data */
 @interface RegisteredApplicationCD : RegisteredApplication
 
 /**
  Initialise the object with an Entity from Core data
+ 
  @param underlyingObject a RegisteredApplicationEntity object
+ 
  @return a RegisteredApplicationCD object
  */
 -(instancetype _Nullable) initWithUnderlyingObject:(RegisteredApplicationEntity * _Nonnull) underlyingObject;

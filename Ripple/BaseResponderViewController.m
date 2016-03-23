@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Setup GUI
     [self.lblDescription setText:self.responder.responderDescription];
     [self.lblTitle setText:self.responder.name];
     [self.tvShareText setText:self.responder.shareString];
@@ -28,10 +30,12 @@
 }
 
 -(IBAction) switchChanged :(id) sender {
+    // When the switch has changed, change the location straight away
     self.responder.shareLocation = self.swtchLocation.isOn;
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
+    // Nothing is saved until you click 'back' on the nav bar
     self.responder.shareString = self.tvShareText.text;
     [self.responders saveToFile];
 }

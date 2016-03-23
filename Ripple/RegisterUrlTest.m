@@ -57,13 +57,13 @@
 
 -(void) testRegisteringUrlWithFields {
     NSString *resp = @"response";
-    NSString *exampleString = [@"This is an example of a lovely string" urlEncode];
+    NSString *exampleString = @"This is an example of a lovely string";
     
     DNLLRegisterUrl *url = [[DNLLRegisterUrl alloc] initWithDescription:exampleString andUrlScheme:resp];
     XCTAssert([url.appDescription isEqualToString:exampleString]);
     XCTAssert([url.responseName isEqualToString:resp]);
     
-    NSString *expectedString = [NSString stringWithFormat:@"ripple://com.ripple.register#%@-%@", resp, exampleString];
+    NSString *expectedString = [NSString stringWithFormat:@"ripple://com.ripple.register#%@-%@", [resp urlEncode], [exampleString urlEncode]];
     XCTAssert([[url.url absoluteString] isEqualToString:expectedString]);
         
 }

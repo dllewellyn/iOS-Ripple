@@ -9,7 +9,8 @@
 #import "ExtraRespondersTableViewController.h"
 #import "ResponderFactory.h"
 #import "TwitterResponderViewController.h"
-
+#import "URLSchemeHandler.h"
+#import "ResponderUrlAdapter.h"
 
 @interface ExtraRespondersTableViewController ()
 
@@ -73,17 +74,28 @@
 
 #pragma ExtraResponderTableCell delegate
 -(void) responderChanged:(Responder *) responder {
+    
     BOOL didSave = [self.responders saveToFile];
 #warning need to do something with this
-    if (responder.enabled)
+    
+    if (responder != nil && responder.enabled)
     {
         BaseResponderViewController *ctrl = [[TwitterResponderViewController alloc] initWithNibName:@"TwitterResponderViewController" bundle:[NSBundle mainBundle]];
         
         ctrl.responders = self.responders;
         ctrl.responder = responder;
         
+        DNLLRegisterUrl *url = [ResponderUrlAdapter registerUrlForResponder:responder];
+
+        if (url != nil && url.url != nil)
+        {
+            // This returns an alert view but we don't really want that here
+            (void)[[[URLSchemeHandler alloc] init]handleWithUrl:url.url andApplicationName:@"Ripple"];
+        }
+        
         [self.navigationController pushViewController:ctrl animated:YES];
     }
+
 }
 
 

@@ -20,6 +20,8 @@
 		6F1278691CA1529B000921E7 /* TwitterResponderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F1278671CA1529B000921E7 /* TwitterResponderViewController.xib */; };
 		6F12786D1CA15632000921E7 /* BaseResponderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F12786C1CA15632000921E7 /* BaseResponderViewController.m */; };
 		6F1278701CA164A8000921E7 /* ResponderUrlAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F12786F1CA164A8000921E7 /* ResponderUrlAdapter.m */; };
+		6F3DE8921CA28E9000325D07 /* DNLLUnRegisterUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE8911CA28E9000325D07 /* DNLLUnRegisterUrl.m */; };
+		6F3DE8941CA290C600325D07 /* TestDNLLUnRegisterUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE8931CA290C600325D07 /* TestDNLLUnRegisterUrl.m */; };
 		6F48ABA71CA002D700189F2E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA51CA002D700189F2E /* Fabric.framework */; };
 		6F48ABA81CA002D700189F2E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA61CA002D700189F2E /* Crashlytics.framework */; };
 		6F48ABAC1CA008E700189F2E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA91CA008E600189F2E /* TwitterKit.framework */; };
@@ -100,6 +102,9 @@
 		6F12786C1CA15632000921E7 /* BaseResponderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseResponderViewController.m; sourceTree = "<group>"; };
 		6F12786E1CA164A8000921E7 /* ResponderUrlAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderUrlAdapter.h; sourceTree = "<group>"; };
 		6F12786F1CA164A8000921E7 /* ResponderUrlAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderUrlAdapter.m; sourceTree = "<group>"; };
+		6F3DE8901CA28E9000325D07 /* DNLLUnRegisterUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLUnRegisterUrl.h; sourceTree = "<group>"; };
+		6F3DE8911CA28E9000325D07 /* DNLLUnRegisterUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLUnRegisterUrl.m; sourceTree = "<group>"; };
+		6F3DE8931CA290C600325D07 /* TestDNLLUnRegisterUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestDNLLUnRegisterUrl.m; path = ../Ripple/TestDNLLUnRegisterUrl.m; sourceTree = "<group>"; };
 		6F48ABA51CA002D700189F2E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		6F48ABA61CA002D700189F2E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		6F48ABA91CA008E600189F2E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -224,6 +229,8 @@
 				6F052CA01C9ABE8A00AF8312 /* DNLLCompleteUrl.m */,
 				6FCC1F351C9AE2090014A43B /* DNLLTriggerUrl.h */,
 				6FCC1F361C9AE2090014A43B /* DNLLTriggerUrl.m */,
+				6F3DE8901CA28E9000325D07 /* DNLLUnRegisterUrl.h */,
+				6F3DE8911CA28E9000325D07 /* DNLLUnRegisterUrl.m */,
 			);
 			name = Formatter;
 			sourceTree = "<group>";
@@ -325,6 +332,7 @@
 		6FACA8C31C916F92004F43F5 /* RippleTests */ = {
 			isa = PBXGroup;
 			children = (
+				6F3DE8931CA290C600325D07 /* TestDNLLUnRegisterUrl.m */,
 				6F052C9A1C9AB7D000AF8312 /* RegisterUrlTest.m */,
 				6FACA8FD1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m */,
 				6FACA8C41C916F92004F43F5 /* RippleTests.m */,
@@ -520,6 +528,7 @@
 				6FACA8AC1C916F92004F43F5 /* main.m in Sources */,
 				6FACA8E41C917DAC004F43F5 /* CoreDataHandler.m in Sources */,
 				6FACA8F41C9187BE004F43F5 /* RegisteredApplicationEntity.m in Sources */,
+				6F3DE8921CA28E9000325D07 /* DNLLUnRegisterUrl.m in Sources */,
 				6F9F14991C9EF44D005C13FB /* ExtraRespondersTableViewController.m in Sources */,
 				6F48ABC01CA046B800189F2E /* ResponderFactory.m in Sources */,
 				6F48ABB51CA0406D00189F2E /* ExtraResponderTableViewCell.m in Sources */,
@@ -543,6 +552,7 @@
 				6F48ABC21CA047F300189F2E /* RespondersListTest.m in Sources */,
 				6FACA8EC1C9182BA004F43F5 /* RegisteredApplicationCDTest.m in Sources */,
 				6FACA8D81C9179E0004F43F5 /* RegisteredApplicationTest.m in Sources */,
+				6F3DE8941CA290C600325D07 /* TestDNLLUnRegisterUrl.m in Sources */,
 				6FACA9001C91BBB7004F43F5 /* AppDelegateTest.m in Sources */,
 				6F052C9B1C9AB7D000AF8312 /* RegisterUrlTest.m in Sources */,
 				6FACA8FE1C91B911004F43F5 /* RegisteredApplicationFactoryTest.m in Sources */,

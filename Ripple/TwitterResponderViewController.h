@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseResponderViewController.h"
 
+/** View controller responsible for configuring the Panic Tweet */
 @interface TwitterResponderViewController : BaseResponderViewController
 
 @end

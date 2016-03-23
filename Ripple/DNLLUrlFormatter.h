@@ -13,7 +13,8 @@
 typedef enum {
     RegisterUrl = 0, // Register a URL in the database
     CompleteUrl = 1, // URL for when an app has completed wipe
-    TriggerUrl = 2
+    TriggerUrl = 2,
+    UnregisterUrl = 3
 } UrlTypes;
 
 /** 

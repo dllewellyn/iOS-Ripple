@@ -62,7 +62,7 @@ NSString *registerUrlFormat = @"ripple://com.ripple.register#%@%@%@";
     if (self != nil)
     {
         self.urlType = RegisterUrl;
-        NSString *urlString = [NSString stringWithFormat:registerUrlFormat, scheme, seperator, applicationDescription];
+        NSString *urlString = [NSString stringWithFormat:registerUrlFormat, [scheme urlEncode], seperator, [applicationDescription urlEncode]];
         self.url = [NSURL URLWithString:urlString];
         self.appDescription = applicationDescription;
         self.responseName = scheme;
