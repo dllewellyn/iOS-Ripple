@@ -22,7 +22,7 @@
     BOOL returnBool = NO;
     RegisteredApplicationList* list = [RegisteredApplicationFactory getDefaultApplicationList];
     
-    [self shareTwitter];
+   // [self shareTwitter];
     if ([list count] > 0)
     {
         int i;

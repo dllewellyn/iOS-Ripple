@@ -10,6 +10,7 @@
 #import "DNLLRegisterUrl.h"
 #import "DNLLCompleteUrl.h"
 #import "DNLLUnRegisterUrl.h"
+#import "DNLLTriggerUrl.h"
 
 #ifndef RegisterURL
 #define RegisterURL "ripple://com.ripple.register"
@@ -33,6 +34,8 @@
     } else if ([[url absoluteString] containsString:@UnregisterURL])
     {
         formatter = [[DNLLUnRegisterUrl alloc] initWithUrl:url];
+    } else if ([[url absoluteString] containsString:@"InternalRipple"]) {
+        formatter = [[DNLLTriggerUrl alloc] initWithUrl:url];
     }
     
     return formatter;

@@ -102,7 +102,7 @@
         if (url != nil && url.url != nil)
         {
             // This returns an alert view but we don't really want that here
-            (void)[[[URLSchemeHandler alloc] init] handleWithUrl:url.url andApplicationName:@"Ripple"];
+            (void)[[[URLSchemeHandler alloc] init] handleWithUrl:url.url andApplicationName:@"InternalRipple"];
         }
     }
     

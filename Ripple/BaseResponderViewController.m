@@ -36,6 +36,7 @@
 
 -(void) viewWillDisappear:(BOOL)animated {
     // Nothing is saved until you click 'back' on the nav bar
+    [self.responder saveAction];
     self.responder.shareString = self.tvShareText.text;
     [self.responders saveToFile];
 }

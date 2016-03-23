@@ -22,6 +22,8 @@
 		6F1278701CA164A8000921E7 /* ResponderUrlAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F12786F1CA164A8000921E7 /* ResponderUrlAdapter.m */; };
 		6F3DE8921CA28E9000325D07 /* DNLLUnRegisterUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE8911CA28E9000325D07 /* DNLLUnRegisterUrl.m */; };
 		6F3DE8941CA290C600325D07 /* TestDNLLUnRegisterUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE8931CA290C600325D07 /* TestDNLLUnRegisterUrl.m */; };
+		6F3DE8971CA2E8F700325D07 /* TwitterResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE8961CA2E8F700325D07 /* TwitterResponder.m */; };
+		6F3DE89A1CA2EA8000325D07 /* SpecialResponders.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE8991CA2EA8000325D07 /* SpecialResponders.m */; };
 		6F48ABA71CA002D700189F2E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA51CA002D700189F2E /* Fabric.framework */; };
 		6F48ABA81CA002D700189F2E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA61CA002D700189F2E /* Crashlytics.framework */; };
 		6F48ABAC1CA008E700189F2E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA91CA008E600189F2E /* TwitterKit.framework */; };
@@ -105,6 +107,10 @@
 		6F3DE8901CA28E9000325D07 /* DNLLUnRegisterUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLUnRegisterUrl.h; sourceTree = "<group>"; };
 		6F3DE8911CA28E9000325D07 /* DNLLUnRegisterUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLUnRegisterUrl.m; sourceTree = "<group>"; };
 		6F3DE8931CA290C600325D07 /* TestDNLLUnRegisterUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestDNLLUnRegisterUrl.m; path = ../Ripple/TestDNLLUnRegisterUrl.m; sourceTree = "<group>"; };
+		6F3DE8951CA2E8F700325D07 /* TwitterResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterResponder.h; sourceTree = "<group>"; };
+		6F3DE8961CA2E8F700325D07 /* TwitterResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterResponder.m; sourceTree = "<group>"; };
+		6F3DE8981CA2EA8000325D07 /* SpecialResponders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialResponders.h; sourceTree = "<group>"; };
+		6F3DE8991CA2EA8000325D07 /* SpecialResponders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialResponders.m; sourceTree = "<group>"; };
 		6F48ABA51CA002D700189F2E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		6F48ABA61CA002D700189F2E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		6F48ABA91CA008E600189F2E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -266,6 +272,10 @@
 				6F48ABBC1CA0462400189F2E /* Responder.m */,
 				6F48ABBE1CA046B800189F2E /* ResponderFactory.h */,
 				6F48ABBF1CA046B800189F2E /* ResponderFactory.m */,
+				6F3DE8951CA2E8F700325D07 /* TwitterResponder.h */,
+				6F3DE8961CA2E8F700325D07 /* TwitterResponder.m */,
+				6F3DE8981CA2EA8000325D07 /* SpecialResponders.h */,
+				6F3DE8991CA2EA8000325D07 /* SpecialResponders.m */,
 			);
 			name = Responders;
 			sourceTree = "<group>";
@@ -498,7 +508,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 8f4824790b39aec1dfededfce1ae24725f1dfd5e ecd5c90185aaf11c6bb0ca30cf122555cf3a48f64610d37e3bd2245845bf0f34";
+			shellScript = "SECRET=`/usr/libexec/PlistBuddy Ripple/secrets.plist -c Print:api_secret | tr '\\n' ' '`\necho $SECRET\n./Fabric.framework/run 8f4824790b39aec1dfededfce1ae24725f1dfd5e $SECRET";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -522,9 +532,11 @@
 				6F1278681CA1529B000921E7 /* TwitterResponderViewController.m in Sources */,
 				6FCC1F371C9AE2090014A43B /* DNLLTriggerUrl.m in Sources */,
 				6FACA8F71C9189F0004F43F5 /* RegisteredApplicationListCD.m in Sources */,
+				6F3DE89A1CA2EA8000325D07 /* SpecialResponders.m in Sources */,
 				6F052C901C9AAE1800AF8312 /* DNLLUrlFormatter.m in Sources */,
 				6FACA8B21C916F92004F43F5 /* ViewController.m in Sources */,
 				6FACA8AF1C916F92004F43F5 /* AppDelegate.m in Sources */,
+				6F3DE8971CA2E8F700325D07 /* TwitterResponder.m in Sources */,
 				6FACA8AC1C916F92004F43F5 /* main.m in Sources */,
 				6FACA8E41C917DAC004F43F5 /* CoreDataHandler.m in Sources */,
 				6FACA8F41C9187BE004F43F5 /* RegisteredApplicationEntity.m in Sources */,
@@ -678,6 +690,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Ripple",

@@ -7,6 +7,7 @@
 //
 
 #import "InternalResponders.h"
+#import "SpecialResponders.h"
 #import <Crashlytics/Crashlytics.h>
 
 @interface InternalResponders()
@@ -17,21 +18,6 @@
 @end
 
 @implementation InternalResponders
-
-// Name of the responder
-const NSString *name = @"title";
-
-// Is the responder enabled
-const NSString *enabled = @"enabled";
-
-// Description of the responder
-const NSString *description = @"description";
-
-// Share text
-const NSString *shareText = @"share_text";
-
-// Share the location when you trigger panic
-const NSString *shareLocation = @"share_location";
 
 -(instancetype _Nullable) initWithResponder:(NSArray<Responder*>*) responders {
     self = [self init];
@@ -64,7 +50,7 @@ const NSString *shareLocation = @"share_location";
         
         for (NSDictionary *dict in responders)
         {
-            Responder *responder = [[Responder alloc] initWithName:dict[name] andDescription:dict[description] andViewController:nil andShareString:dict[shareText] andShareLocation:[dict[shareLocation] boolValue] andIsEnabled:[dict[enabled] boolValue]];
+            Responder *responder = [SpecialResponders getResponder:dict];
             [temp addObject:responder];
         }
         
@@ -94,12 +80,7 @@ const NSString *shareLocation = @"share_location";
     
     for (Responder *responder in self.responders)
     {
-        NSDictionary *temp = @{ name : responder.name,
-                                description: responder.responderDescription,
-                                shareLocation: [NSNumber numberWithBool:responder.shareLocation],
-                                shareText: responder.shareString,
-                                enabled:  [NSNumber numberWithBool:responder.enabled] };
-        [fileArray addObject:temp];
+        [fileArray addObject:[responder getDictionaryForResponder]];
     }
     
     return [fileArray writeToFile:self.getSavePath atomically:YES];

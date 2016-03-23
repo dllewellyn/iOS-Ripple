@@ -30,6 +30,8 @@
     [TwitterKit startWithConsumerKey:dict[@"consumer_key"] consumerSecret:dict[@"consumer_secret"]];
 
     [CoreDataHandler sharedInstance]; //Setup core data early
+    
+
     return YES;
 }
 

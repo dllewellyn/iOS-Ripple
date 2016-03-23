@@ -10,6 +10,7 @@
 #import "DNLLRegisterUrl.h"
 #import "DNLLUnRegisterUrl.h"
 #import "Responder.h"
+#import "DNLLTriggerUrl.h"
 
 @interface ResponderUrlAdapter : NSObject
 
@@ -31,5 +32,14 @@
  @returns formatter object
  */
 +(DNLLUnRegisterUrl * _Nullable) unRegisterUrlForResponder:(Responder * _Nonnull) responder;
+
+/**
+ Get a responder given a URL
+ 
+ @param trigger the trigger to get a responder for
+ 
+ @return responder
+ */
++(Responder * _Nullable) responderForUrl:(DNLLTriggerUrl* _Nonnull) trigger;
 
 @end

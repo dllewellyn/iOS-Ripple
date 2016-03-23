@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>user_id</key>
+		<string></string>
 		<key>share_text</key>
 		<string>I have triggered the panic button!!!</string>
 		<key>share_location</key>
@@ -12,7 +14,7 @@
 		<key>description</key>
 		<string>Send a panic tweet when you trigger the button</string>
 		<key>title</key>
-		<string>Twitter</string>
+		<string>TwitterRipple</string>
 	</dict>
 </array>
 </plist>

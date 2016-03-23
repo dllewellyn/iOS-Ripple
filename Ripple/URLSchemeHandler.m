@@ -13,6 +13,8 @@
 #import "DNLLFormatterFactory.h"
 #import "DNLLRegisterUrl.h"
 #import "DNLLUnRegisterUrl.h"
+#import "DNLLTriggerUrl.h"
+#import "ResponderUrlAdapter.h"
 
 @implementation URLSchemeHandler
 
@@ -116,6 +118,12 @@ NSString *AlreadyStored = @"Application already stored in the list";
                 }
                 
             }
+            break;
+        }
+        case TriggerUrl:
+        {
+            DNLLTriggerUrl *trigger = (DNLLTriggerUrl*) formatter;
+            [[ResponderUrlAdapter responderForUrl:trigger] triggerAction];
             break;
         }
         default:
