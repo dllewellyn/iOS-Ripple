@@ -26,3 +26,12 @@ When the user presses Panic button in the Panic App:
 The major component of this application ise URL Schemes, below is a pretty good guide: 
 
 https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html
+
+# Building
+
+To build you should just be able to open in XCode, however the app relies quite a lot on Fabric.io (https://fabric.io/) so in order you run correctly, you will need to create a file called 'secrets.plist' in your main bundle, and set the following keys in it:
+
+* consumer_key
+* consumer_secret
+
+Which you can get from setting up 'Twitter'
