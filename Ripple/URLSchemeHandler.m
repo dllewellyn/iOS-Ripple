@@ -12,6 +12,7 @@
 #import "Trigger.h"
 #import "DNLLFormatterFactory.h"
 #import "DNLLRegisterUrl.h"
+#import "DNLLUnRegisterUrl.h"
 
 @implementation URLSchemeHandler
 
@@ -96,7 +97,27 @@ NSString *AlreadyStored = @"Application already stored in the list";
             
             break;
         }
+        case UnregisterUrl:
+        {
+            RegisteredApplicationList * list = [RegisteredApplicationFactory getDefaultApplicationList];
+            DNLLUnRegisterUrl *unregFormatter = (DNLLUnRegisterUrl*) formatter;
             
+            for (int i = 0; i < [list count]; i++)
+            {
+                
+                RegisteredApplication * app = [list objectAtIndex:i];
+                
+                if ([app.applicationName isEqualToString:applicationName] && [app.urlScheme isEqualToString:unregFormatter.scheme])
+                {
+                    [app removeItem];
+                    [app save];
+                    [list dataChangedAtIndex:i];
+                    break;
+                }
+                
+            }
+            break;
+        }
         default:
             break;
     };

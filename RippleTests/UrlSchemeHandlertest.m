@@ -13,6 +13,9 @@
 #import "RegisteredApplicationCD.h"
 #import "CoreDataHandler.h"
 #import "DNLLRegisterUrl.h"
+#import "RegisteredApplicationList.h"
+#import "RegisteredApplicationFactory.h"
+#import "DNLLUnRegisterUrl.h"
 
 @interface UrlSchemeHandlertest : XCTestCase {
     URLSchemeHandler *handler;
@@ -25,10 +28,21 @@
 - (void)setUp {
     [super setUp];
     handler = [[URLSchemeHandler alloc] init];
+    RegisteredApplication * app = nil;
+    
+    RegisteredApplicationList * list = [RegisteredApplicationFactory getDefaultApplicationList];
+    for (int i = 0 ; i < [list count]; i++)
+    {
+        app = [list objectAtIndex:i];
+        [app removeItem];
+    }
+    
+    if (app != nil) {
+        [app save];
+    }
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
@@ -57,6 +71,28 @@
 -(void) testInvalidUrlScheme {
     NSURL *url = [NSURL URLWithString:@"ripple://com.ripple.invalid"];
     XCTAssertThrows([handler handleWithUrl:url andApplicationName:@"Testname"]);
+}
+
+-(void) testThatRegisteringAndThenUnregisteringAUrlMeansItIsRemoved {
+    NSString *appName = @"Test app name";
+    
+    RegisteredApplicationList * list = [RegisteredApplicationFactory getDefaultApplicationList];
+    [list reload];
+    XCTAssertEqual([list count], 0);
+    
+    DNLLRegisterUrl *url = [[DNLLRegisterUrl alloc] initWithDescription:@"description" andUrlScheme:@"testscheme"];
+    [handler handleWithUrl:url.url andApplicationName:appName];
+    
+
+    [list reload];
+    XCTAssert([[list objectAtIndex:0].applicationName isEqualToString:appName]);
+    
+    DNLLUnRegisterUrl *unreg = [[DNLLUnRegisterUrl alloc] initWithScheme:@"testscheme"];
+    [handler handleWithUrl:unreg.url andApplicationName:appName];
+    
+    [list reload];
+    XCTAssertEqual([list count], 0);
+    
 }
 
 @end

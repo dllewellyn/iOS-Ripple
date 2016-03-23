@@ -7,6 +7,8 @@
 //
 
 #import "InternalResponders.h"
+#import <Crashlytics/Crashlytics.h>
+
 @interface InternalResponders()
 
 // Remove readonly
@@ -131,7 +133,7 @@ const NSString *shareLocation = @"share_location";
     
     if (error != nil)
     {
-        #warning handle error
+        [[Crashlytics sharedInstance] recordError:error];
     }
     
     return deleted;

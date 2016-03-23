@@ -9,6 +9,8 @@
 #import "RegisteredApplicationCD.h"
 #import "CoreDataHandler.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 @interface RegisteredApplicationCD() {
     RegisteredApplicationEntity *_underlyingObject;
 }
@@ -84,7 +86,7 @@
     [[_underlyingObject  managedObjectContext] save:&error];
     
     if (error != nil) {
-#warning Handle this error
+        [[Crashlytics sharedInstance] recordError:error];
         NSLog(@"%@", error);
     }
 }

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DNLLRegisterUrl.h"
+#import "DNLLUnRegisterUrl.h"
 #import "Responder.h"
 
 @interface ResponderUrlAdapter : NSObject
@@ -21,5 +22,14 @@
  @returns formatter object.
  */
 +(DNLLRegisterUrl * _Nullable) registerUrlForResponder:(Responder* _Nonnull) responder;
+
+/**
+ Get a URL for a given responder that can be used to unregister the application
+ 
+ @param responder to get formatter for 
+ 
+ @returns formatter object
+ */
++(DNLLUnRegisterUrl * _Nullable) unRegisterUrlForResponder:(Responder * _Nonnull) responder;
 
 @end

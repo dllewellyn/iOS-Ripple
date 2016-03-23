@@ -34,4 +34,15 @@
 }
 
 
+- (void)testUnregisterConstructorWithUrl {
+    NSString *urlFormat = @"ripple://com.ripple.unregister#blah";
+    NSURL *murl = [NSURL URLWithString:urlFormat];
+
+    DNLLUnRegisterUrl *url = [[DNLLUnRegisterUrl alloc] initWithUrl:murl];
+    XCTAssert([[url.url absoluteString] isEqualToString:urlFormat]);
+    XCTAssert([url.scheme isEqualToString:@"blah"]);
+    XCTAssertEqual(url.urlType, UnregisterUrl);
+}
+
+
 @end

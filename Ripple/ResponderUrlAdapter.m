@@ -15,4 +15,8 @@
     return registerUrl;
 }
 
++(DNLLUnRegisterUrl * _Nullable) unRegisterUrlForResponder:(Responder * _Nonnull) responder {
+    DNLLUnRegisterUrl *unregisterUrl = [[DNLLUnRegisterUrl alloc] initWithScheme:responder.name];
+    return unregisterUrl;
+}
 @end

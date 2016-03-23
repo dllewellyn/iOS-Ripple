@@ -11,6 +11,8 @@
 #import "RegisteredApplicationEntity.h"
 #import "CoreDataHandler.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 @interface RegisteredApplicationListCD()
 
 // Internal holder for the application list
@@ -39,9 +41,9 @@
     }
     
     
-    if (error != nil) {
-        #warning Handle this error
-        NSLog(@"%@", error);
+    if (error != nil)
+    {
+        [[Crashlytics sharedInstance] recordError:error];
     }
     
     return self;

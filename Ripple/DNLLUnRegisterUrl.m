@@ -27,4 +27,16 @@ NSString *urlFormat = @"ripple://com.ripple.unregister#%@";
     return self;
 }
 
+-(instancetype _Nullable) initWithUrl:(NSURL * _Nonnull) url {
+    self = [super init];
+    
+    if (self != nil)
+    {
+        self.urlType = UnregisterUrl;
+        self.scheme = [url fragment];
+        self.url = url;
+    }
+    
+    return self;
+}
 @end
