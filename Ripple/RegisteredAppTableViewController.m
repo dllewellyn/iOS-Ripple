@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.list = [RegisteredApplicationFactory getDefaultApplicationList];
+    [self.list reload];
     self.list.delegate = self;
 }
 
