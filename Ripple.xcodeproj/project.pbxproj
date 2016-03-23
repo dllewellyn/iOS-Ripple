@@ -19,6 +19,7 @@
 		6F1278681CA1529B000921E7 /* TwitterResponderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1278661CA1529B000921E7 /* TwitterResponderViewController.m */; };
 		6F1278691CA1529B000921E7 /* TwitterResponderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F1278671CA1529B000921E7 /* TwitterResponderViewController.xib */; };
 		6F12786D1CA15632000921E7 /* BaseResponderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F12786C1CA15632000921E7 /* BaseResponderViewController.m */; };
+		6F1278701CA164A8000921E7 /* ResponderUrlAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F12786F1CA164A8000921E7 /* ResponderUrlAdapter.m */; };
 		6F48ABA71CA002D700189F2E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA51CA002D700189F2E /* Fabric.framework */; };
 		6F48ABA81CA002D700189F2E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA61CA002D700189F2E /* Crashlytics.framework */; };
 		6F48ABAC1CA008E700189F2E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48ABA91CA008E600189F2E /* TwitterKit.framework */; };
@@ -97,6 +98,8 @@
 		6F1278671CA1529B000921E7 /* TwitterResponderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterResponderViewController.xib; sourceTree = "<group>"; };
 		6F12786B1CA15632000921E7 /* BaseResponderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseResponderViewController.h; sourceTree = "<group>"; };
 		6F12786C1CA15632000921E7 /* BaseResponderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseResponderViewController.m; sourceTree = "<group>"; };
+		6F12786E1CA164A8000921E7 /* ResponderUrlAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderUrlAdapter.h; sourceTree = "<group>"; };
+		6F12786F1CA164A8000921E7 /* ResponderUrlAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderUrlAdapter.m; sourceTree = "<group>"; };
 		6F48ABA51CA002D700189F2E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		6F48ABA61CA002D700189F2E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		6F48ABA91CA008E600189F2E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 				6FACA9021C91C31E004F43F5 /* URLSchemeHandler.m */,
 				6F052C911C9AAE1D00AF8312 /* Formatter */,
 				6F48ABBA1CA0461600189F2E /* Responders */,
+				6F12786E1CA164A8000921E7 /* ResponderUrlAdapter.h */,
+				6F12786F1CA164A8000921E7 /* ResponderUrlAdapter.m */,
 			);
 			path = Ripple;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 			files = (
 				6F48ABBD1CA0462400189F2E /* Responder.m in Sources */,
 				6F48ABB91CA0461000189F2E /* InternalResponders.m in Sources */,
+				6F1278701CA164A8000921E7 /* ResponderUrlAdapter.m in Sources */,
 				6F7F70931C980E3C0010CA9B /* Trigger.m in Sources */,
 				6F12786D1CA15632000921E7 /* BaseResponderViewController.m in Sources */,
 				6FACA9031C91C31E004F43F5 /* URLSchemeHandler.m in Sources */,
